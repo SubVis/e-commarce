@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+html(lang="ar", dir="rtl")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="./css/lib/tailwind.css")
+        link(rel="stylesheet", href="./css/main.css")
+        link(href="https://fonts.googleapis.com/css?family=Almarai:300,400,700,800&display=swap&subset=arabic", rel="stylesheet")
+        title عاملة كام؟
+    body
+        include ../components/navbar
+        +nav(['','','active','',''])
+        .container.mx-auto
+            h2.text-xl.text-black.font-semibold.text-center.my-4 بكل سهولة هتقدر تعلن عن عربيتك ببلاش 
+            .flex.flex-wrap.px-5
+                p.header المعلومات الأساسية
+                .flex.flex-wrap.w-full
+                    .input(class="w-full md:w-1/2 lg:w-1/3")
+                        p.my-2.font-bold.title عنوان الإعلان:
+                        input.rounded-lg.text-gray-300.border.border-gray-300.p-2(placeholder='مثال: فيات 98 بحالة ممتازة')
+    script(src="./js/libs/jquery.js")
+    script(src="./js/libs/move.js")
+    script(src="./js/libs/scroll-out.js")
+    script(src="./js/main.js")

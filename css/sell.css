@@ -35,16 +35,6 @@ nav a.btn:hover {
   transform: translateY(-5px);
 }
 
-.header {
-  border-bottom: 2px solid #7420A3;
-  padding-bottom: 5px;
-  padding-left: 15px;
-  display: inline-block;
-  font-weight: bold;
-  font-size: 18px;
-  margin: 10px 0;
-}
-
 [data-scroll] {
   transition: all 1s;
 }
@@ -59,4 +49,4 @@ nav a.btn:hover {
   transform: translateY(50px);
 }
 
-/*# sourceMappingURL=main.css.map */
+/*# sourceMappingURL=sell.css.map */
