@@ -2,6 +2,47 @@
   font-family: "Almarai", sans-serif;
 }
 
+input, select {
+  outline: none;
+  transition: all 0.4s ease;
+  color: black;
+  border-radius: 10px;
+  padding: 10px 10px;
+  width: 100%;
+  border: 1px solid #eee;
+}
+input:focus, select:focus {
+  background: #eee;
+}
+input::-moz-placeholder, select::-moz-placeholder {
+  color: #a9a9a9;
+  opacity: 1;
+}
+input:-ms-input-placeholder, select:-ms-input-placeholder {
+  color: #a9a9a9;
+}
+input::-webkit-input-placeholder, select::-webkit-input-placeholder {
+  color: #a9a9a9;
+}
+
+select {
+  z-index: 50 !important;
+}
+
+.choices__inner {
+  background: white !important;
+  border-radius: 10px !important;
+  padding: 10px 10px !important;
+}
+
+.choices__list.choices__list--single {
+  color: #a9a9a9 !important;
+}
+
+.choices__item--choice.choices__item--selectable {
+  padding: 50px;
+}
+
 .main_bg {
   background-color: #7420A3;
 }
@@ -30,6 +71,11 @@ nav a.btn {
   border-radius: 40px;
   padding: 5px 15px;
   transition: all ease 0.4s;
+  font-size: 18px;
+  outline: none;
+}
+nav a.btn:focus {
+  outline: none;
 }
 nav a.btn:hover {
   transform: translateY(-5px);
