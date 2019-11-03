@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   font-family: "Almarai", sans-serif;
 }
@@ -9,6 +10,7 @@ input, select, textarea {
   color: black;
   border-radius: 10px;
   padding: 10px 10px;
+  margin: 0px 0px !important;
   width: 100%;
   border: 1px solid #eee;
 }
@@ -28,6 +30,20 @@ input::-webkit-input-placeholder, select::-webkit-input-placeholder, textarea::-
 
 select {
   z-index: 50 !important;
+}
+
+.help-block {
+  user-select: none;
+}
+.help-block.help {
+  color: #7420A3;
+}
+.help-block.danger {
+  color: #df2721;
+}
+
+.choices {
+  margin: 0px !important;
 }
 
 .choices__inner {
@@ -151,6 +167,30 @@ footer ul li:first-child {
 }
 .inputs .btn:hover {
   transform: translateY(-5px);
+}
+
+input.images {
+  width: 16rem;
+  height: 16rem;
+  position: relative;
+}
+input.images:hover::after {
+  background-color: #ddd;
+  cursor: pointer;
+}
+input.images::after {
+  transition: all 0.4s ease;
+  background-color: #eee;
+  content: "اضغط لإضافة صورة";
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #aaa;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
 }
 
 /*# sourceMappingURL=sell.css.map */
