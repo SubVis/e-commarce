@@ -9,7 +9,8 @@ $main-yellow-gradient: linear-gradient(to left, rgba(163, 139, 32, 1), rgba(163,
 *
     font-family: 'Almarai', sans-serif
 
-input, select
+input, select, textarea
+    resize: vertical
     outline: none
     transition: all 0.4s ease
     color: black
@@ -42,6 +43,10 @@ select
 
 .choices__item--choice.choices__item--selectable 
     padding: 50px 
+
+.choices__list--dropdown.choices__list 
+    max-height: 200px !important
+
 // Mixins
 @mixin btn($coulor)
     color: white
@@ -88,6 +93,19 @@ nav
     font-size: 18px
     margin: 10px 0
 
+
+footer
+    border-top-left-radius: 20px
+    border-top-right-radius: 20px
+    a.btn
+        @include btn($main-yellow-gradient)
+    ul
+        li
+            &:first-child
+                margin-bottom: 40px
+            margin: 10px 0
+
+    
 [data-scroll]
     transition: all 1s
 

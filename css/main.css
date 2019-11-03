@@ -2,7 +2,8 @@
   font-family: "Almarai", sans-serif;
 }
 
-input, select {
+input, select, textarea {
+  resize: vertical;
   outline: none;
   transition: all 0.4s ease;
   color: black;
@@ -11,17 +12,17 @@ input, select {
   width: 100%;
   border: 1px solid #eee;
 }
-input:focus, select:focus {
+input:focus, select:focus, textarea:focus {
   background: #eee;
 }
-input::-moz-placeholder, select::-moz-placeholder {
+input::-moz-placeholder, select::-moz-placeholder, textarea::-moz-placeholder {
   color: #a9a9a9;
   opacity: 1;
 }
-input:-ms-input-placeholder, select:-ms-input-placeholder {
+input:-ms-input-placeholder, select:-ms-input-placeholder, textarea:-ms-input-placeholder {
   color: #a9a9a9;
 }
-input::-webkit-input-placeholder, select::-webkit-input-placeholder {
+input::-webkit-input-placeholder, select::-webkit-input-placeholder, textarea::-webkit-input-placeholder {
   color: #a9a9a9;
 }
 
@@ -41,6 +42,10 @@ select {
 
 .choices__item--choice.choices__item--selectable {
   padding: 50px;
+}
+
+.choices__list--dropdown.choices__list {
+  max-height: 200px !important;
 }
 
 .main_bg {
@@ -89,6 +94,32 @@ nav a.btn:hover {
   font-weight: bold;
   font-size: 18px;
   margin: 10px 0;
+}
+
+footer {
+  border-top-left-radius: 20px;
+  border-top-right-radius: 20px;
+}
+footer a.btn {
+  color: white;
+  background-image: linear-gradient(to left, #a38b20, #a38b20, rgba(163, 139, 32, 0.75));
+  border-radius: 40px;
+  padding: 5px 15px;
+  transition: all ease 0.4s;
+  font-size: 18px;
+  outline: none;
+}
+footer a.btn:focus {
+  outline: none;
+}
+footer a.btn:hover {
+  transform: translateY(-5px);
+}
+footer ul li {
+  margin: 10px 0;
+}
+footer ul li:first-child {
+  margin-bottom: 40px;
 }
 
 [data-scroll] {
