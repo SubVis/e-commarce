@@ -1,4 +1,8 @@
 @charset "UTF-8";
+.color {
+  color: #7420A3;
+}
+
 * {
   font-family: "Almarai", sans-serif;
 }
@@ -110,6 +114,38 @@ nav a.btn:hover {
   font-weight: bold;
   font-size: 18px;
   margin: 10px 0;
+}
+
+button.indigo {
+  color: white;
+  background-image: linear-gradient(to left, #7420a3, #7420a3, rgba(116, 32, 163, 0.75));
+  border-radius: 40px;
+  padding: 5px 15px;
+  transition: all ease 0.4s;
+  font-size: 18px;
+  outline: none;
+}
+button.indigo:focus {
+  outline: none;
+}
+button.indigo:hover {
+  transform: translateY(-5px);
+}
+
+button.yellow {
+  color: white;
+  background-image: linear-gradient(to left, #a38b20, #a38b20, rgba(163, 139, 32, 0.75));
+  border-radius: 40px;
+  padding: 5px 15px;
+  transition: all ease 0.4s;
+  font-size: 18px;
+  outline: none;
+}
+button.yellow:focus {
+  outline: none;
+}
+button.yellow:hover {
+  transform: translateY(-5px);
 }
 
 footer {

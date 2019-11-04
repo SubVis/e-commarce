@@ -4,6 +4,8 @@ $main-indigo: #7420A3
 $main-indigo-gradient: linear-gradient(to left, rgba(116, 32, 163, 1), rgba(116, 32, 163, 1), rgba(116, 32, 163, 0.75) )
 $main-yellow-gradient: linear-gradient(to left, rgba(163, 139, 32, 1), rgba(163, 139, 32, 1), rgba(163, 139, 32, 0.75) )
 
+.color
+    color: $main-indigo
 // Global styles
 
 *
@@ -102,6 +104,10 @@ nav
     font-size: 18px
     margin: 10px 0
 
+button.indigo
+    @include btn($main-indigo-gradient)
+button.yellow
+    @include btn($main-yellow-gradient)
 
 footer
     border-top-left-radius: 20px
