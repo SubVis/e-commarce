@@ -1,0 +1,9 @@
+mixin select(label , options)
+    .input.px-2.my-2(class="w-full md:w-1/2 lg:w-1/3")
+        p.my-2.font-bold.title اللون:
+        select#slim-select.js-choice(dir="rtl" name="model")
+            optgroup
+                - for (let i= 0; i< options.length; ++i){
+                    option(value=i+1)=options[i]
+                -   }
+        p.help-block.help هذا الحقل مطلوب. 

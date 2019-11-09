@@ -5,9 +5,10 @@ html(lang="ar", dir="rtl")
     body
         include ../components/navbar
         +nav(['','','active','',''])
-        .container.mx-auto.pt-32
+        .container.mx-auto.pb-32
             .px-4
-                h2.text-xl.text-black.font-semibold.text-center.my-4 بكل سهولة هتقدر تعلن عن عربيتك ببلاش 
+                include ../utils/header
+                +header(' بكل سهولة هتقدر تعلن عن عربيتك ببلاش')                
                 p.header الصور
                 include ../components/imageForm
             
