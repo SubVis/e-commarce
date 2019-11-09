@@ -8,6 +8,7 @@
     "pug": "pug --watch pug/pages -o public --pretty",
     "sass": "sass --watch sass:css",
     "add": "git add .",
+    "commit": "git commit -m",
     "push": "git push -u origin master"
   },
   "keywords": [],
