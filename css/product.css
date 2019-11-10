@@ -230,7 +230,6 @@ button.next:hover {
   cursor: pointer;
   height: 50px;
   margin: 0px 10px;
-  border: 1px solid #000;
   transition: all 0.4s ease;
   opacity: 0.5;
 }
@@ -241,7 +240,6 @@ button.next:hover {
   margin-left: 0;
 }
 .navigation .parent.active {
-  border-color: #7420A3;
   opacity: 1;
 }
 .navigation .parent:hover {
@@ -249,6 +247,25 @@ button.next:hover {
 }
 .navigation .parent img {
   height: 100%;
+}
+
+.product--details .flex ul li {
+  margin: 10px 0;
+}
+.product--details .flex ul li span.label {
+  font-weight: bold;
+  color: #7420A3;
+}
+
+.sellerNumber {
+  background-image: linear-gradient(to left, #7420a3, #7420a3, rgba(116, 32, 163, 0.75));
+}
+.sellerNumber .overlay {
+  transition: all 0.4s ease;
+}
+.sellerNumber .overlay p {
+  user-select: none;
+  cursor: none;
 }
 
 /*# sourceMappingURL=product.css.map */

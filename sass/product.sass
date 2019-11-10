@@ -29,7 +29,6 @@ button.next
         cursor: pointer
         height: 50px
         margin: 0px 10px
-        border: 1px solid #000
         transition: all 0.4s ease
         opacity: 0.5
 
@@ -39,10 +38,23 @@ button.next
             margin-left: 0
 
         &.active
-            border-color: $main-indigo
             opacity: 1
         &:hover
             opacity: 1
         img
             height: 100%
 
+.product--details .flex
+    ul li
+        margin: 10px 0
+
+        span.label
+            font-weight: bold
+            color: $main-indigo
+.sellerNumber
+    .overlay
+        transition: all 0.4s ease
+        p
+            user-select: none
+            cursor: none
+    background-image: $main-indigo-gradient

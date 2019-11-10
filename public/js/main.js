@@ -26,3 +26,11 @@ file.forEach(input => {
     me[0].src = URL.createObjectURL(input.files[0])
   };
 });
+
+var productOverlay = document.querySelector('#sellerNumber .overlay');
+var productOwner = document.querySelector('#sellerNumber .number');
+
+productOverlay.addEventListener('click', () => {
+  productOverlay.style.display = 'none';
+  productOwner.style.display = 'block' 
+});

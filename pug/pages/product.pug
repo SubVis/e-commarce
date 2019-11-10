@@ -10,19 +10,48 @@ html(lang="ar", dir="rtl")
             p.header مرسيدس بيضا 2018
 
             .flex.flex-wrap
-                .relative.carousel(class="md:w-2/5 w-full ")
-                    .siema
-                        img.w-full(data-index="0" , src='https://placeimg.com/640/480/arch=?4')
-                        img.w-full(data-index="1" , src='https://placeimg.com/640/480/animals=?5')
-                        img.w-full(data-index="2" , src='https://placeimg.com/640/480/nature=?6')
+                .relative.carousel(class="md:w-3/5 w-full ")
+                    include ../components/carousel
+                    +carousel
+            .product--details.my-12
+                .flex.flex-wrap
+                    ul(class="sm:w-1/4")
+                        li.my-2
+                            span.color.font-bold.w-32.inline-block.text-right الماركة:
+                            span.text-left.w-20.inline-block شيء ما
+                        li.my-2
+                            span.color.font-bold.w-32.inline-block.text-right موديل:
+                            span.text-left.w-20.inline-block شيء ما
+                        li.my-2
+                            span.color.font-bold.w-32.inline-block.text-right ناقل الحركة:
+                            span.text-left.w-20.inline-block شيء ما
+                        li.my-2
+                            span.color.font-bold.w-32.inline-block.text-right سعة الموتور:
+                            span.text-left.w-20.inline-block شيء ما
+                        li.mt-32
+                            span.text-green-500.w-32.text-2xl.font-bold.inline-block.text-right السعر:
+                            span.text-left.w-20.inline-block.text-2xl 125.8481
 
-
-                    .navigation.flex.flex-wrap.justify-center
-                    button.prev 
-                        i.fas.fa-arrow-left
-                    button.next 
-                        i.fas.fa-arrow-right   
-
+                    ul(class="sm:w-2/4")
+                        li.my-2
+                            span.color.font-bold.w-32.inline-block.text-right المدينة:
+                            span.text-left.w-20.inline-block شيء ما
+                        li.my-2
+                            span.color.font-bold.w-32.inline-block.text-right اللون:
+                            span.text-left.w-20.inline-block شيء ما
+                        li.my-2
+                            span.color.font-bold.w-32.inline-block.text-right نوع الوقود:
+                            span.text-left.w-20.inline-block شيء ما
+                        li.my-2
+                            span.color.font-bold.w-32.inline-block.text-right المسافة:
+                            span.text-left.w-20.inline-block شيء ما
+                    #sellerNumber.sellerNumber.rounded-lg.flex.justify-center.items-center(class="sm:w-1/4")
+                        .overlay.py-5
+                            p.text-center.text-white.text-2xl اضغط هنا لأرقام التواصل
+                            p.text-center.text-white.text-xl.mt-3 متنساش تقول للبايع انك جاي من موقعنا 
+                        .number.hidden
+                            p.text-center.text-white.text-xl.my-3 متنساش تقول للبايع انك جاي من موقعنا 
+                            p.text-center.text-white.font-bold.text-xl.my-3 01153297653
     // here
     script(src="js/libs/siema.min.js")
     script(src="https://kit.fontawesome.com/7ccf14bcd9.js")
