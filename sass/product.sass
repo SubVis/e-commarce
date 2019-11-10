@@ -1,0 +1,48 @@
+@import 'main'
+
+@mixin carousel()
+    position: absolute
+    transform: translateY(-50%)
+    height: 60px
+    background: #eee
+    opacity: 0.7
+    width: 50px
+    color: black
+    top: 50%
+    transition: all 0.4s ease
+    cursor: pointer
+    &:hover
+        background: #ddd 
+
+button.prev
+    @include carousel()
+    left: -60px
+    right: auto
+button.next
+    @include carousel()
+    right: -60px
+    left: auto
+
+.navigation
+    margin-top: 10px
+    .parent
+        cursor: pointer
+        height: 50px
+        margin: 0px 10px
+        border: 1px solid #000
+        transition: all 0.4s ease
+        opacity: 0.5
+
+        &:first-child
+            margin-right: 0
+        &:last-child
+            margin-left: 0
+
+        &.active
+            border-color: $main-indigo
+            opacity: 1
+        &:hover
+            opacity: 1
+        img
+            height: 100%
+
