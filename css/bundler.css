@@ -114,12 +114,12 @@ nav a.btn:hover {
   padding-bottom: 5px;
   padding-left: 15px;
   display: inline-block;
-  font-weight: bold;
-  font-size: 18px;
+  font-weight: 400;
+  font-size: 25px;
   margin: 10px 0;
 }
 
-button.indigo {
+button.indigo, a.btn.indigo {
   color: white;
   background-image: linear-gradient(to left, #7420a3, #7420a3, rgba(116, 32, 163, 0.75));
   border-radius: 40px;
@@ -128,14 +128,14 @@ button.indigo {
   font-size: 18px;
   outline: none;
 }
-button.indigo:focus {
+button.indigo:focus, a.btn.indigo:focus {
   outline: none;
 }
-button.indigo:hover {
+button.indigo:hover, a.btn.indigo:hover {
   transform: translateY(-5px);
 }
 
-button.yellow {
+button.yellow, a.btn.yellow {
   color: white;
   background-image: linear-gradient(to left, #a38b20, #a38b20, rgba(163, 139, 32, 0.75));
   border-radius: 40px;
@@ -144,10 +144,10 @@ button.yellow {
   font-size: 18px;
   outline: none;
 }
-button.yellow:focus {
+button.yellow:focus, a.btn.yellow:focus {
   outline: none;
 }
-button.yellow:hover {
+button.yellow:hover, a.btn.yellow:hover {
   transform: translateY(-5px);
 }
 
@@ -303,12 +303,12 @@ nav a.btn:hover {
   padding-bottom: 5px;
   padding-left: 15px;
   display: inline-block;
-  font-weight: bold;
-  font-size: 18px;
+  font-weight: 400;
+  font-size: 25px;
   margin: 10px 0;
 }
 
-button.indigo {
+button.indigo, a.btn.indigo {
   color: white;
   background-image: linear-gradient(to left, #7420a3, #7420a3, rgba(116, 32, 163, 0.75));
   border-radius: 40px;
@@ -317,14 +317,14 @@ button.indigo {
   font-size: 18px;
   outline: none;
 }
-button.indigo:focus {
+button.indigo:focus, a.btn.indigo:focus {
   outline: none;
 }
-button.indigo:hover {
+button.indigo:hover, a.btn.indigo:hover {
   transform: translateY(-5px);
 }
 
-button.yellow {
+button.yellow, a.btn.yellow {
   color: white;
   background-image: linear-gradient(to left, #a38b20, #a38b20, rgba(163, 139, 32, 0.75));
   border-radius: 40px;
@@ -333,10 +333,10 @@ button.yellow {
   font-size: 18px;
   outline: none;
 }
-button.yellow:focus {
+button.yellow:focus, a.btn.yellow:focus {
   outline: none;
 }
-button.yellow:hover {
+button.yellow:hover, a.btn.yellow:hover {
   transform: translateY(-5px);
 }
 
@@ -533,12 +533,12 @@ nav a.btn:hover {
   padding-bottom: 5px;
   padding-left: 15px;
   display: inline-block;
-  font-weight: bold;
-  font-size: 18px;
+  font-weight: 400;
+  font-size: 25px;
   margin: 10px 0;
 }
 
-button.indigo {
+button.indigo, a.btn.indigo {
   color: white;
   background-image: linear-gradient(to left, #7420a3, #7420a3, rgba(116, 32, 163, 0.75));
   border-radius: 40px;
@@ -547,14 +547,14 @@ button.indigo {
   font-size: 18px;
   outline: none;
 }
-button.indigo:focus {
+button.indigo:focus, a.btn.indigo:focus {
   outline: none;
 }
-button.indigo:hover {
+button.indigo:hover, a.btn.indigo:hover {
   transform: translateY(-5px);
 }
 
-button.yellow {
+button.yellow, a.btn.yellow {
   color: white;
   background-image: linear-gradient(to left, #a38b20, #a38b20, rgba(163, 139, 32, 0.75));
   border-radius: 40px;
@@ -563,10 +563,10 @@ button.yellow {
   font-size: 18px;
   outline: none;
 }
-button.yellow:focus {
+button.yellow:focus, a.btn.yellow:focus {
   outline: none;
 }
-button.yellow:hover {
+button.yellow:hover, a.btn.yellow:hover {
   transform: translateY(-5px);
 }
 
@@ -646,6 +646,23 @@ button.next:hover {
   background: #ddd;
 }
 
+@media (max-width: 425px) {
+  .carousel-btns {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .carousel-btns button {
+    display: inline-block;
+    position: static;
+    top: auto;
+    left: auto;
+    right: auto;
+    bottom: auto;
+    margin: 0 5px;
+    transform: translateY(0);
+  }
+}
 .navigation {
   margin-top: 10px;
 }
@@ -682,6 +699,20 @@ button.next:hover {
 
 .sellerNumber {
   background-image: linear-gradient(to left, #7420a3, #7420a3, rgba(116, 32, 163, 0.75));
+}
+.sellerNumber .overlay {
+  transition: all 0.4s ease;
+}
+.sellerNumber .overlay p {
+  user-select: none;
+  cursor: none;
+}
+
+.card {
+  transition: all 0.25s ease;
+}
+.card:hover {
+  box-shadow: 10px 10px 36px -6px rgba(0, 0, 0, 0.67);
 }
 
 /*# sourceMappingURL=bundler.css.map */

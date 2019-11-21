@@ -1,0 +1,10 @@
+mixin suggestion(label)
+    .suggestion.my-4.overflow-hidden
+        p.header=label
+
+        .-mx-2.mt-3
+            .flex.px-2.flex-wrap.justify-center
+                - for(let i = 0; i < 3 ; ++i){
+                    .px-2(class="w-full md:w-1/3")
+                        include ./Card
+                - }

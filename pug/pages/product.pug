@@ -9,10 +9,11 @@ html(lang="ar", dir="rtl")
         .container.mx-auto
             p.header مرسيدس بيضا 2018
 
-            .flex.flex-wrap
-                .relative.carousel(class="md:w-3/5 w-full ")
-                    include ../components/carousel
-                    +carousel
+            .container.mx-auto
+                .flex.flex-wrap
+                    .relative.carousel(class="w-full md:w-3/5")
+                        include ../components/carousel
+                        +carousel
             .product--details.my-12
                 .flex.flex-wrap
                     ul(class="sm:w-1/4")
@@ -52,6 +53,11 @@ html(lang="ar", dir="rtl")
                         .number.hidden
                             p.text-center.text-white.text-xl.my-3 متنساش تقول للبايع انك جاي من موقعنا 
                             p.text-center.text-white.font-bold.text-xl.my-3 01153297653
+
+            include ../components/Suggestions
+            +suggestion('عربيات من نفس الفئة السعرية')
+            +suggestion('عربيات من نفس النوع')
+
     // here
     script(src="js/libs/siema.min.js")
     script(src="https://kit.fontawesome.com/7ccf14bcd9.js")
