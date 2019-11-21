@@ -73,6 +73,13 @@ select
     &:hover
         transform: translateY(-5px)
 
+
+@mixin inCenter()
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
 .main_bg
     background-color: $main-indigo
 
@@ -134,5 +141,12 @@ footer
     opacity: 0
     transform: translateY(50px)
 
+.bgi
+    @include inCenter()
+    
+    opacity: 0.4
+    height: 500px
 
-  
+form.center
+    @include inCenter()
+    border-radius: 30px

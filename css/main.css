@@ -191,4 +191,21 @@ footer ul li:first-child {
   transform: translateY(50px);
 }
 
+.bgi {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0.4;
+  height: 500px;
+}
+
+form.center {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 30px;
+}
+
 /*# sourceMappingURL=main.css.map */
