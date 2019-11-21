@@ -151,6 +151,10 @@ button.yellow:hover, a.btn.yellow:hover {
   transform: translateY(-5px);
 }
 
+.fav:active i {
+  color: #7420A3;
+}
+
 footer {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -338,6 +342,10 @@ button.yellow:focus, a.btn.yellow:focus {
 }
 button.yellow:hover, a.btn.yellow:hover {
   transform: translateY(-5px);
+}
+
+.fav:active i {
+  color: #7420A3;
 }
 
 footer {
@@ -570,6 +578,10 @@ button.yellow:hover, a.btn.yellow:hover {
   transform: translateY(-5px);
 }
 
+.fav:active i {
+  color: #7420A3;
+}
+
 footer {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;
@@ -646,11 +658,19 @@ button.next:hover {
   background: #ddd;
 }
 
-@media (max-width: 425px) {
+@media (max-width: 640px) {
+  .product--details ul li {
+    text-align: center;
+  }
+
+  .carousel {
+    padding: 0 20px;
+  }
   .carousel-btns {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-top: 20px;
   }
   .carousel-btns button {
     display: inline-block;
@@ -661,6 +681,11 @@ button.next:hover {
     bottom: auto;
     margin: 0 5px;
     transform: translateY(0);
+  }
+  .carousel .navigation .parent {
+    margin-left: 5px;
+    margin-right: 0px;
+    border: 1px solid #000;
   }
 }
 .navigation {

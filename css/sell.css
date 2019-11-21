@@ -148,6 +148,10 @@ button.yellow:hover, a.btn.yellow:hover {
   transform: translateY(-5px);
 }
 
+.fav:active i {
+  color: #7420A3;
+}
+
 footer {
   border-top-left-radius: 20px;
   border-top-right-radius: 20px;

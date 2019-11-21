@@ -24,13 +24,17 @@ button.next
     left: auto
 
 
-@media (max-width: 425px)
+@media (max-width: 640px)
+    .product--details
+        ul li 
+            text-align: center
     .carousel
+        padding: 0 20px
         &-btns
             display: flex
             justify-content: center
             align-items: center
-
+            margin-top: 20px 
             button
                 display: inline-block
                 position: static
@@ -40,7 +44,11 @@ button.next
                 bottom: auto
                 margin: 0 5px
                 transform: translateY(0)
-            
+        .navigation
+            .parent
+                margin-left: 5px 
+                margin-right: 0px
+                border: 1px solid #000 
 .navigation
     margin-top: 10px
     .parent
