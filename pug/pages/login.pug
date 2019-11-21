@@ -1,26 +1,28 @@
 <!DOCTYPE html>
 html(lang="ar", dir="rtl")
     include ../utils/head
-    +head('عاملة كام | بيع')
+    +head('عاملة كام | تسجيل الدخول')
     body
-        .h-screen
-            img.bgi(src="./images/undraw_authentication_fsn5.svg", alt="background")
+        include ../components/navbar
+        +nav(['','','','',''])
+        .flex.justify-center.items-center.my-8
+            img.z-10.bgi(style="height: 600px" src="./images/undraw_authentication_fsn5.svg", alt="background")
 
-            form.center.bg-white.border.border-gray-300.flex.items-center.flex-col.p-6(action="#", method="",class="w-full sm:w-3/4 md:w-2/4")
+            form.z-20.center.bg-white.border.border-gray-300.flex.items-center.flex-col.p-6(action="#", method="",class="w-full sm:w-3/4 md:w-2/4")
                 p.header تسجيل الدخول
 
                 .input.px-2.my-2(class="w-full")
                     p.my-2.font-bold.title البريد الإلكتروني:
-                    input(type="text", placeholder='example@example.com', auto-complete="off")
+                    input(type="text", placeholder='example@example.com', auto-complete="off",required)
                     p.help-block.help هذا الحقل مطلوب.
 
                 .input.px-2.my-2(class="w-full")
                     p.my-2.font-bold.title كلمة السر:
-                    input(type="text", placeholder='أدخل كلمة السر', auto-complete="off")
+                    input(type="password", placeholder='أدخل كلمة السر', auto-complete="off",required)
                     p.help-block.help هذا الحقل مطلوب.
                 
                 a.text-gray-400.self-start.my-2(href="signUp.html") ليس لديك حساب؟
-                a.btn.indigo.my-2(href="userProfile.html") تسجيل دخول
+                button.btn.indigo.my-2(type="submit") تسجيل دخول
         
         
         include ../components/footer
