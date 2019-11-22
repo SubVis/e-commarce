@@ -6,7 +6,7 @@ module.exports = {
         //     content: [
         //         'puplic/**/*.html',
         //     ],
-        //     defualtextractor: content => content.match(/[A-Za-z0-9-_:]/g) || []
+        //     defualExtractor: content => content.match(/[A-Za-z0-9-_:]/g) || []
         // }),
         require('cssnano')({
             preset: 'default',

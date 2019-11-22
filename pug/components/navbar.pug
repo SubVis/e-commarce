@@ -2,19 +2,25 @@ mixin nav(active)
     nav.main_bg
         .container.mx-auto
             .flex.flex-wrap.wrapper
-                .logo.flex.flex-grow.items-center.justify-center.my-2.px-2(class="md:my-0 md:flex-grow-0")
-                    h1.text-white.font-bold.text-2xl عاملة كام؟
+                .logo.flex.flex-grow.items-center.justify-center.my-2.px-2(class="md:my-0 w-full md:w-auto md:flex-grow")
+                    a(href="index.html")
+                        h1.text-white.font-bold.text-2xl عاملة كام؟                 
 
                 .links.flex-grow.flex.items-center.flex-wrap(class="justify-center md:justify-end")
-                    ul.inline-block
-                        li.inline-block(class=active[0])
+                    ul.inline-block.flex.flex-wrap                            
+                        li.flex-grow(class="mt-3 text-center sm:mt-0" class=active[5])
+                            a(href="userProfile.html") 
+                                i.fa.fa-user.mx-2 
+                                |أبوحميد
+                        li.flex-grow(class="mt-3 text-center sm:mt-0" class=active[0])
                             a(href="index.html") الرئيسية
-                        li.inline-block(class=active[1])
+                        li.flex-grow(class="mt-3 text-center sm:mt-0" class=active[1])
                             a(href="#") اشتري
-                        li.inline-block(class=active[2])
+                        li.flex-grow(class="mt-3 text-center sm:mt-0" class=active[2])
                             a(href="sell.html") بيع
-                        li.inline-block(class=active[3])
+                        li.flex-grow(class="mt-3 text-center sm:mt-0" class=active[3])
                             a(href="#") كيفية الاستخدام 
-                        li.inline-block(class=active[4])
+                        li.flex-grow(class="mt-3 text-center sm:mt-0" class=active[4])
                             a(href="#") المدونة
-                    a.btn.indigo.mr-5(href="sell.html" class="mt-4 mb-2 md:my-0") اعلن عن عربيتك
+                            
+                    a.btn.yellow.mr-5(href="sell.html" class="mt-4 mb-2 md:my-0") اعلن عن عربيتك
