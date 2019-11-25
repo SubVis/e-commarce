@@ -8,10 +8,10 @@
 }
 
 .shape {
-  clip-path: polygon(0 50%, 100% 30%, 100% 60%, 0 80%);
-  width: 100%;
-  height: 250px;
+  width: 200%;
+  transform: rotate(-5deg);
   background-color: #7420A3;
+  padding: 20px 0;
 }
 .shape p {
   transform: rotate(-2deg);
@@ -127,6 +127,23 @@ nav a.btn:hover {
   font-weight: 400;
   font-size: 25px;
   margin: 10px 0;
+}
+
+.quick-search .-mx-2 .inputs .px-2 .px-2 .flex select.js-choice {
+  margin: 0px 10px !important;
+}
+
+.brand .img {
+  opacity: 0.4;
+  transition: all 0.4s ease;
+}
+.brand .img:hover {
+  opacity: 1;
+}
+
+.pagenation .active {
+  background-color: #7420A3;
+  color: white;
 }
 
 button.indigo, a.btn.indigo {

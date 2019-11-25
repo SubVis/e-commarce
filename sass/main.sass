@@ -14,11 +14,10 @@ $main-yellow-gradient: linear-gradient(to left, rgba(163, 139, 32, 1), rgba(163,
 
 
 .shape
-    clip-path: polygon(0 50%, 100% 30%, 100% 60%, 0 80%)
-    width: 100%
-    height: 250px
+    width: 200%
+    transform: rotate(-5deg)
     background-color: $main-indigo
-
+    padding: 20px 0
     p
         transform: rotate(-2deg)
         color: white
@@ -124,6 +123,19 @@ nav
     font-weight: 400
     font-size: 25px
     margin: 10px 0
+
+.quick-search .-mx-2 .inputs .px-2 .px-2 .flex select.js-choice
+    margin: 0px 10px !important
+.brand .img 
+    opacity: 0.4
+    transition: all 0.4s ease
+    &:hover
+        opacity: 1
+
+.pagenation
+    .active
+        background-color: $main-indigo
+        color: white
 
 button.indigo, a.btn.indigo
     @include btn($main-indigo-gradient)
