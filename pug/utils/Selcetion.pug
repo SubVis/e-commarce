@@ -7,3 +7,13 @@ mixin select(label , options)
                     option(value=i+1)=options[i]
                 -   }
         p.help-block.help هذا الحقل مطلوب. 
+
+mixin selectWithOutClassese(labelClasses,label,selectName,options,hint)
+    .px-2(class="w-full sm:w-1/2md:w-1/5")
+        label(for=selectName class=labelClasses).mb-5.font-bold.title=label
+        select#slim-select.js-choice(dir="rtl" name=selectName)
+            optgroup
+                - for (let i= 0; i< options.length; ++i){
+                    option(value=i+1)=options[i]
+                -   }
+        p.help-block.help=hint

@@ -1,0 +1,5 @@
+mixin input(inputClass,label,hint)
+    .input(class=inputClass)
+        p.my-2.font-bold.title=label
+        input&attributes(attributes)
+        p.help-block.help=hint
