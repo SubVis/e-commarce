@@ -8,13 +8,22 @@
 }
 
 .shape {
-  width: 200%;
-  transform: rotate(-5deg);
+  position: relative;
   background-color: #7420A3;
-  padding: 20px 0;
+  padding: 120px 0;
+}
+.shape::before {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 0px;
+  height: 0px;
+  border-bottom: 85px solid transparent;
+  border-left: 1500px solid #fff;
 }
 .shape p {
-  transform: rotate(-2deg);
   color: white;
   font-size: 30px;
   padding-top: 15px;

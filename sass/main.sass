@@ -14,12 +14,35 @@ $main-yellow-gradient: linear-gradient(to left, rgba(163, 139, 32, 1), rgba(163,
 
 
 .shape
-    width: 200%
-    transform: rotate(-5deg)
+    position: relative
+    
+    &::before
+        content: ''
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        
+        width: 0px
+        height: 0px
+        border-bottom: 120px solid transparent
+        border-left: 1500px solid #fff
+    &::after
+        content: ''
+        display: block
+        position: absolute
+        bottom: 0
+        right: 0
+        
+        width: 0px
+        height: 0px
+        border-top: 120px solid transparent
+        border-right: 1500px solid #fff
+
     background-color: $main-indigo
-    padding: 20px 0
+    padding: 120px 0
+
     p
-        transform: rotate(-2deg)
         color: white
         font-size: 30px
         padding-top: 15px 

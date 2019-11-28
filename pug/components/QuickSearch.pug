@@ -1,0 +1,53 @@
+.quick-search
+    p.header البحث السريع
+    .-mx-2
+        form(action="#", method="post").inputs.flex.px-2.flex-wrap
+            include ../utils/Selcetion
+            .px-2(class="w-full sm:w-1/2 md:w-1/5 ")
+                //- labelClasses,label,selectName,options,hint
+                +selectWithOutClassese('','الماركة:','brand', ['--اختر--','شيء','شيء','شيء','شيء'])
+            .px-2(class="w-full mt-2 sm:w-1/2 md:w-1/5")
+                //- labelClasses,label,selectName,options,hint
+                +selectWithOutClassese('','الموديل:','model', ['--اختر--','شيء','شيء','شيء','شيء'])
+            .px-2(class="w-full mt-2 sm:w-1/2 md:w-1/5")
+                //- labelClasses,label,selectName,options,hint
+                +selectWithOutClassese('','المحافظة:','لovernorate', ['--اختر--','شيء','شيء','شيء','شيء'])
+            .px-2(class="w-full mt-2 sm:w-1/2 md:w-1/5")
+                //- labelClasses,label,selectName,options,hint
+                +selectWithOutClassese('','نوع الهيكل:','outfitType', ['--اختر--','شيء','شيء','شيء','شيء'])
+            .px-2(class="w-full mt-2 sm:w-1/2 md:w-1/5")
+                //- labelClasses,label,selectName,options,hint
+                +selectWithOutClassese('','نوع الناقل:','transmissionType', ['--اختر--','شيء','شيء','شيء','شيء'])
+            .px-2.flex.justify-between(class="w-full mt-2 sm:w-1/2 md:w-2/5")
+                //- labelClasses,label,selectName,options,hint
+                .px-2(class="w-full")
+                    label.my-2.font-bold.title السعر:
+                    .flex
+                        select#slim-select.js-choice(dir="rtl" name='salaryFrom')
+                            optgroup
+                                option(value=1) من
+                                option(value=2) شيء
+                                option(value=3) شيء
+                        select#slim-select.js-choice(dir="rtl" name='salaryTo')
+                            optgroup
+                                option(value=1) إلى
+                                option(value=2) شيء
+                                option(value=3) شيء
+            .px-2.flex.justify-between(class="w-full mt-2 sm:w-1/2 md:w-2/5")
+                //- labelClasses,label,selectName,options,hint
+                .px-2(class="w-full")
+                    label.my-2.font-bold.title سنة الصنع:
+                    .flex.flex-justify-between
+                        select#slim-select.js-choice(dir="rtl" name='salaryFrom')
+                            optgroup
+                                option(value=1) من
+                                option(value=2) شيء
+                                option(value=3) شيء
+                        select#slim-select.js-choice(dir="rtl" name='salaryTo')
+                            optgroup
+                                option(value=1) إلى
+                                option(value=2) شيء
+                                option(value=3) شيء
+
+            .px-2.mt-4.flex.justify-center.items-end.flex-grow
+                button(type="submit").indigo.px-32 بحث   

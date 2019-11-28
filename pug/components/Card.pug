@@ -1,7 +1,7 @@
 .card.my-2
     img(style="height: 300px;width: 100%", src="https://via.placeholder.com/600", alt="image")
-    section.card-details.border.border-balck.px-2.pt-2
-        ul.ml-3.inline-block
+    section.card-details.border.border-balck.px-2.pt-2.flex.flex-wrap
+        ul(class="w-full lg:w-1/2")
             li.my-2
                 span.color.font-bold.inline-block.text-right.ml-2 الماركة:
                 span.text-left.inline-block شيء ما
@@ -15,7 +15,7 @@
                 span.color.font-bold.inline-block.text-right.ml-2 سعة الموتور:
                 span.text-left.inline-block شيء ما
 
-        ul.inline-block
+        ul(class="w-full lg:w-1/2")
             li.my-2
                 span.color.font-bold.inline-block.text-right.ml-2 المدينة:
                 span.text-left.inline-block شيء ما
@@ -31,8 +31,8 @@
 
 
         .cost.my-2.flex.flex-wrap(class="w-full px-2 sm:px-0")
-            .money.ml-4(class="mb-2 sm:mb-0")
-                span.text-green-500.text-xl.font-bold.inline-block.text-right السعر:
-                span.text-left.inline-block.text-xl 125.8481
+            .money.ml-4(class="w-1/2")
+                span.text-green-500.text-xl.font-bold.ml-2 السعر:
+                span.text-lg 125.8481
 
-            a.btn.indigo.mt-2(href="#") شاهد المزيد
+            a.btn.indigo(href="product.html") شاهد المزيد
