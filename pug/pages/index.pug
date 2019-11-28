@@ -6,9 +6,46 @@ html(lang="ar", dir="rtl")
         include ../components/navbar
         +nav(['active','','','',''])
         
-        //- .shape.flex.justify-center.items-center
-        //-     p أهلاً وسهلاً    
-    include ../components/footer
+        .container.mx-auto.px-2
+            section.banner-one
+                h1.text-center.text-2xl.font-bold.mt-5 منصة سوق السيارات منصة متخصصة في بيع السيارات المستعملة
+                .flex.flex-wrap.py-5.items-center(class="flex-col-reverse md:flex-row")
+                    .text(class="w-full md:w-1/2")
+                        p.font-bold.text-lg سوق السيارات المصري مكان بيجتمع فيه أصحاب العربيات عشان يبيعو عربياتهم بس المشوار بيبقى صعب جداً خصوصاً  لو أقرب سوق ليك بعيد عنك. عشان كدة عملنا المنصة للسوق تقدر تعرض عربيتك للبيع
+                            span.color  من غير أي  فلوس أو فوائد للمنصة.
+                    .img(class="w-full md:w-1/3 mr-auto mb-5 md:mb-0")
+                        img(src="./images/SVG/undraw_Vehicle_sale_a645.svg", alt="بيع سيارات مستعملة")
+                    
+                .w-full.flex.flex-wrap.justify-center.items-center.my-5
+                    p.text-center.font-bold.text-lg.w-full.mb-2 يبقى ليه تنزل؟
+                    a.btn.indigo(href="sell.html") أعلن عن عربيتك
+
+        include ../utils/Shape
+        +shape("ليه تبيع في سوق السيارات؟", '', '','hidden')
+
+        .container.mx-auto.px-2(class="md:mt-8")    
+            section.feats.overflow-hidden
+                .-mx-2
+                    .flex.flex-wrap.px-2
+                        each feat in [ [ 'آمن' , 'undraw_Security_on_ff2u' ] ,[ 'وفر تكاليف السوق' , 'undraw_chilling_8tii' ] ,[ 'قارن بين كل الأسعار' , 'undraw_all_the_data_h4ki' ] ]
+                            .px-2(class="w-full md:w-1/3")
+                                .feat.flex.flex-col.justify-center.items-center
+                                    p.header=feat[0]
+                                    img.my-5(src="./images/SVG/" + feat[1] + ".svg", alt=feat[0])
+            
+        +shape("ازاي تبيع في سوق السيارات؟", '', 'transform: rotateX(180deg)','hidden')(style="transform: rotateX(180deg)")                 
+        .container.mx-auto.px-2.mb-8
+            section.feats.overflow-hidden
+                .-mx-2
+                    .flex.flex-wrap.px-2
+                        ul.w-full.flex.flex-col.justify-center.items-center(class="sm:justify-center sm:items-start sm:w-1/2")
+                            each step in ['سجل حساب', 'اختر نوع السيارة',"اختر الموديل", "كمل البيانات", "خلاص كدة"]
+                                li.mb-2
+                                    i.far.color.fa-check-circle.mx-2 
+                                    span=step +'.'
+                        img.w-full(class="sm:w-1/2" , src="./images/SVG/undraw_order_confirmed_1m3v.svg", alt="تم تسجيل السيارة بنجاح")
+        
+        include ../components/footer
 
     script(src="./js/libs/move.js")
     script(src="./js/main.js")  
