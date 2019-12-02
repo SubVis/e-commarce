@@ -223,10 +223,19 @@ footer a.btn:hover {
   transform: translateY(-5px);
 }
 footer ul li {
-  margin: 10px 0;
+  margin: 20px 0;
 }
 footer ul li:first-child {
   margin-bottom: 40px;
+}
+footer ul li a {
+  transition: all 0.4s ease;
+}
+footer ul li a:hover {
+  color: #ffd000;
+}
+footer ul:last-child li:first-child {
+  margin-bottom: 0px !important;
 }
 
 [data-scroll] {

@@ -13,11 +13,13 @@
   "keywords": [],
   "author": "Mohammed Ayman",
   "license": "ISC",
-  "dependencies": {
+  "devDependencies ": {
     "@fullhuman/postcss-purgecss": "^1.3.0",
     "autoprefixer": "^9.7.2",
     "cssnano": "^4.1.10",
-    "lodash": "^4.17.15",
+    "lodash": "^4.17.15"
+  },
+  "dependencies": {
     "siema": "^1.5.1",
     "tailwindcss": "^1.1.3"
   }

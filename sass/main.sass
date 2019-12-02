@@ -163,6 +163,7 @@ button.yellow, a.btn.yellow
 
 .fav:active i 
     color: $main-indigo
+
 footer
     border-top-left-radius: 20px
     border-top-right-radius: 20px
@@ -172,7 +173,13 @@ footer
         li
             &:first-child
                 margin-bottom: 40px
-            margin: 10px 0
+            margin: 20px 0
+            a
+                transition: all 0.4s ease
+                &:hover
+                    color: $main-yellow
+        &:last-child li:first-child
+            margin-bottom: 0px !important
 
 
 [data-scroll]
