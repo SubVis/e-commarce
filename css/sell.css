@@ -199,7 +199,7 @@ button.yellow:hover, a.btn.yellow:hover {
   transform: translateY(-5px);
 }
 
-.fav:active i {
+.fav:active i, .fav:hover i {
   color: #7420A3;
 }
 

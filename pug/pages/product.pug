@@ -6,7 +6,7 @@ html(lang="ar", dir="rtl")
         include ../components/navbar
         +nav(['','active','','',''])
         
-        .container.mx-auto.mb-5
+        .container.mx-auto.mb-5.px-2
             p.header مرسيدس بيضا 2018
 
             .container.mx-auto
@@ -45,12 +45,12 @@ html(lang="ar", dir="rtl")
                             span.text-left.inline-block شيء ما
                     
                     #sellerNumber.sellerNumber.rounded-lg.flex.justify-center.items-center(class="w-3/4 mx-auto sm:w-1/3")
-                        .overlay.py-5
-                            p.text-center.text-white.text-2xl اضغط هنا لأرقام التواصل
-                            p.text-center.text-white.text-xl.mt-3 متنساش تقول للبايع انك جاي من موقعنا 
-                        .number.hidden
-                            p.text-center.text-white.text-xl.my-3 متنساش تقول للبايع انك جاي من موقعنا 
-                            p.text-center.text-white.font-bold.text-xl.my-3 01153297653
+                        .overlay.py-5.px-2
+                            p.text-center.text-white(class="md:text-xl") اضغط هنا لأرقام التواصل
+                            p.text-center.text-white.mt-3(class="md:text-lg") متنساش تقول للبايع انك جاي من موقعنا 
+                        .number.hidden.px-2
+                            p.text-center.text-white.my-3(class="md:text-lg") متنساش تقول للبايع انك جاي من موقعنا 
+                            p.text-center.text-white.font-bold.my-3(class="md:text-lg") 01153297653
                     
                     .cost.my-2(class="w-full px-2 sm:px-0")
                         span.text-green-500.w-32.text-2xl.font-bold.inline-block.text-right السعر:

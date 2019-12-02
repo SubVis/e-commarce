@@ -78,6 +78,10 @@ html(lang="ar", dir="rtl")
 
     include ../components/footer
     script(src="./js/libs/siema.min.js")
+    
+    script(src="./js/lib/Choices.js")
+    script(src="./js/modules/choicesConfig.js")
+
     script. 
         const mySiema = new Siema({
             selector: '.siema',
@@ -88,4 +92,4 @@ html(lang="ar", dir="rtl")
             rtl: true,
         });
         setInterval(() => mySiema.next(), 2000);
-    script(src="./js/main.js")  
+    script(src="./js/main.js")
