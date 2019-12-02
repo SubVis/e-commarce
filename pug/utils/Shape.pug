@@ -1,5 +1,5 @@
 mixin shape(text, btnText, textStyle, btnClasses)
     .shape.flex.justify-center.w-full.overflow-x-hidden&attributes(attributes)
-        .all
-            p.text-center.mb-4(style=textStyle)=text
+        .all(style=textStyle)
+            p.text-center.mb-4=text
             a.btn.yellow(class=btnClasses , href="sell.html")=btnText

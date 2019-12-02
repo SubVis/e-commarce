@@ -3,6 +3,17 @@ window.onload = function () {
   // ScrollOut();
 }
 
+let nav = document.getElementById('collapse'),
+    navState = document.getElementById('collapse').style.display,
+    btn = document.getElementById('closeNavbtn');
+
+btn.onclick = function () {
+  if(nav.style.display == 'none')
+    nav.style.display = "block"
+  else
+    nav.style.display = "none"
+}
+
 let Select = [...document.querySelectorAll('.js-choice')];
 
 Select.forEach(inpt => {

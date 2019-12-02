@@ -20,8 +20,19 @@
   left: 0;
   width: 0px;
   height: 0px;
-  border-bottom: 85px solid transparent;
+  border-bottom: 120px solid transparent;
   border-left: 1500px solid #fff;
+}
+.shape::after {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 0px;
+  height: 0px;
+  border-top: 120px solid transparent;
+  border-right: 1500px solid #fff;
 }
 .shape p {
   color: white;
@@ -94,23 +105,14 @@ select {
   background-color: #7420A3;
 }
 
-nav, nav .wrapper {
-  min-height: 4rem;
+nav {
+  background-color: #7420A3;
 }
-nav ul li {
-  color: white;
-  padding: 0 10px;
+nav #collapse {
+  transition: all 0.4s ease;
 }
-nav ul li.active a {
-  border-bottom: 2px solid white;
-}
-nav ul li a {
-  border-bottom: 2px solid transparent;
-  padding-bottom: 5px;
-  transition: all 0.2s ease-in;
-}
-nav ul li:hover a {
-  border-bottom: 2px solid white;
+nav a.active {
+  color: #ffd000;
 }
 nav a.btn {
   color: white;

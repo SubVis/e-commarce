@@ -1,26 +1,23 @@
 mixin nav(active)
-    nav.main_bg
-        .container.mx-auto
-            .flex.flex-wrap.wrapper
-                .logo.flex.flex-grow.items-center.justify-center.my-2.px-2(class="md:my-0 w-full md:w-auto md:flex-grow")
-                    a(href="index.html")
-                        h1.text-white.font-bold.text-2xl عاملة كام؟                 
+    nav.flex.items-center.justify-between.flex-wrap.p-6.indigo
+        .flex.items-center.flex-no-shrink.flex-grow.text-white.mr-6
+            span.font-semibold.text-xl.tracking-tight عاملة كام؟
+        .block( ,class='md:hidden')
+            button.flex.items-center.px-3.py-2.border.rounded(id="closeNavbtn", class='text-white hover:border-white')
+                svg.h-3.w-3(viewbox='0 0 20 20' ,fill="white", xmlns='http://www.w3.org/2000/svg')
+                    title Menu
+                    path(d='M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z')
+        .w-full.block.flex-grow(id="collapse" class='text-center md:flex md:items-center md:w-auto')
+            .text-sm(class='md:flex-grow')
+                a.block.mt-4.text-white.mr-4(class='md:inline-block md:mt-0 hover:text-white', href="userProfile.html", class=active[5]) 
+                    i.fa.fa-user.mx-2 
+                    |أبوحميد
+                    
+                a.block.mt-4.text-white.mr-4(href='index.html', class='md:inline-block md:mt-0 hover:text-white', class=active[0]) الرئيسية
+                a.block.mt-4.text-white.mr-4(href='buy.html', class='md:inline-block md:mt-0 hover:text-white', class=active[1]) اشتري
+                a.block.mt-4.text-white.mr-4(href='sell.html', class='md:inline-block md:mt-0 hover:text-white', class=active[2]) بيع
+                a.block.mt-4.text-white.mr-4(href='#', class='md:inline-block md:mt-0 hover:text-white', class=active[3]) كيفية الاستخدام 
+                a.block.mt-4.text-white.mr-4(href='#', class='md:inline-block md:mt-0 hover:text-white', class=active[4]) المدونة
 
-                .links.flex-grow.flex.items-center.flex-wrap(class="justify-center md:justify-end")
-                    ul.inline-block.flex.flex-wrap                            
-                        li.flex-grow(class="mt-3 text-center sm:mt-0" class=active[5])
-                            a(href="userProfile.html") 
-                                i.fa.fa-user.mx-2 
-                                |أبوحميد
-                        li.flex-grow(class="mt-3 text-center sm:mt-0" class=active[0])
-                            a(href="index.html") الرئيسية
-                        li.flex-grow(class="mt-3 text-center sm:mt-0" class=active[1])
-                            a(href="buy.html") اشتري
-                        li.flex-grow(class="mt-3 text-center sm:mt-0" class=active[2])
-                            a(href="sell.html") بيع
-                        li.flex-grow(class="mt-3 text-center sm:mt-0" class=active[3])
-                            a(href="#") كيفية الاستخدام 
-                        li.flex-grow(class="mt-3 text-center sm:mt-0" class=active[4])
-                            a(href="#") المدونة
-                            
-                    a.btn.yellow.mr-5(href="login.html" class="mt-4 mb-2 md:my-0") سجل دخولك
+            div(class="mt-5 md:mt-0")
+                a.btn.yellow.mr-5(href="login.html" class="mt-4 mb-2 md:my-0") سجل دخولك

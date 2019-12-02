@@ -7,7 +7,7 @@ html(lang="ar", dir="rtl")
         +nav(['active','','','',''])
         
         .container.mx-auto.px-2
-            section.banner-one
+            section.banner-one.h-screen.flex.flex-col.justify-center.items-center
                 h1.text-center.text-2xl.font-bold.mt-5 منصة سوق السيارات منصة متخصصة في بيع السيارات المستعملة
                 .flex.flex-wrap.py-5.items-center(class="flex-col-reverse md:flex-row")
                     .text(class="w-full md:w-1/2")
@@ -21,8 +21,8 @@ html(lang="ar", dir="rtl")
                     a.btn.indigo(href="sell.html") أعلن عن عربيتك
 
         include ../utils/Shape
-        +shape("ليه تبيع في سوق السيارات؟", '', '','hidden')
-
+        +shape("ليه تبيع في سوق السيارات؟", '', 'transform: rotate(-6deg)','hidden')
+            //- shape(text, btnText, textStyle, btnClasses)
         .container.mx-auto.px-2(class="md:mt-8")    
             section.feats.overflow-hidden
                 .-mx-2
@@ -33,7 +33,7 @@ html(lang="ar", dir="rtl")
                                     p.header=feat[0]
                                     img.my-5(src="./images/SVG/" + feat[1] + ".svg", alt=feat[0])
             
-        +shape("ازاي تبيع في سوق السيارات؟", '', 'transform: rotateX(180deg)','hidden')(style="transform: rotateX(180deg)")                 
+        +shape("ازاي تبيع في سوق السيارات؟", '', 'transform: rotate(-6deg)','hidden')                
         .container.mx-auto.px-2.mb-8
             section.feats.overflow-hidden
                 .-mx-2
