@@ -10,6 +10,16 @@
   font-family: "Almarai", sans-serf;
 }
 
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #eee;
+}
+::-webkit-scrollbar-thumb {
+  background: #7420A3;
+}
+
 .shape {
   position: relative;
   background-color: #7420A3;
@@ -254,6 +264,16 @@ form.center {
 
 * {
   font-family: "Almarai", sans-serf;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #eee;
+}
+::-webkit-scrollbar-thumb {
+  background: #7420A3;
 }
 
 .shape {
@@ -541,6 +561,16 @@ input.images::after {
 
 * {
   font-family: "Almarai", sans-serf;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #eee;
+}
+::-webkit-scrollbar-thumb {
+  background: #7420A3;
 }
 
 .shape {

@@ -2,12 +2,12 @@ mixin nav(active)
     nav.flex.items-center.justify-between.flex-wrap.p-6.indigo
         .flex.items-center.flex-no-shrink.flex-grow.text-white.mr-6
             span.font-semibold.text-xl.tracking-tight عاملة كام؟
-        .block( ,class='md:hidden')
+        .block(class='md:hidden')
             button.flex.items-center.px-3.py-2.border.rounded(id="closeNavbtn", class='text-white hover:border-white')
                 svg.h-3.w-3(viewbox='0 0 20 20' ,fill="white", xmlns='http://www.w3.org/2000/svg')
                     title Menu
                     path(d='M0 3h20v2H0V3zm0 6h20v2H0V9zm0 6h20v2H0v-2z')
-        .w-full.block.flex-grow(id="collapse" class='text-center md:flex md:items-center md:w-auto')
+        .w-full.hidden.flex-grow(id="collapse" class='text-center md:flex md:items-center md:w-auto')
             .text-sm(class='md:flex-grow')
                 a.block.mt-4.text-white.mr-4(class='md:inline-block md:mt-0 hover:text-white', href="userProfile.html", class=active[5]) 
                     i.fa.fa-user.mx-2 

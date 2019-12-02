@@ -4,7 +4,6 @@ window.onload = function () {
 }
 
 let nav = document.getElementById('collapse'),
-    navState = document.getElementById('collapse').style.display,
     btn = document.getElementById('closeNavbtn');
 
 btn.onclick = function () {
