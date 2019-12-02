@@ -18,7 +18,6 @@ const
     carouselItems = [...carousel.childNodes].slice(0, carousel.childElementCount - 2),
     buttons = document.querySelector('.navigation');
 
-console.log(carouselItems)
 // add button dynamicly 
 let data_index = 0;
 
@@ -45,12 +44,5 @@ const images = Array.from(document.querySelectorAll('img.go-to'));
 
 images.forEach(image => {
     let indexs = image.getAttribute('data-index');
-
-    image.addEventListener('click', () => {
-        mySiema.goTo(indexs-1);
-        console.log(images);
-        console.log(indexs);
-        console.log(mySiema.currentSlide)
-    });
-
-})
+    image.addEventListener('click', () => mySiema.goTo(indexs-1) );
+});

@@ -69,8 +69,14 @@ html(lang="ar", dir="rtl")
         
     // here
     script(src="js/libs/siema.min.js")
+    script.
+        // Seller Number Overlay 
+        var productOverlay = document.querySelector('#sellerNumber .overlay');
+        var productOwner = document.querySelector('#sellerNumber .number');
 
-    script(src="js/carousel.js")
-    // global
-    script(src="./js/libs/move.js")
+        productOverlay.addEventListener('click', () => {
+        productOverlay.style.display = 'none';
+        productOwner.style.display = 'block' 
+        });
+    script(src="js/modules/carousel.js")
     script(src="js/main.js")

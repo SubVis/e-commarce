@@ -232,8 +232,16 @@
   </body>
   <!-- here-->
   <script src="js/libs/siema.min.js"></script>
-  <script src="js/carousel.js"></script>
-  <!-- global-->
-  <script src="./js/libs/move.js"></script>
+  <script>
+    // Seller Number Overlay 
+    var productOverlay = document.querySelector('#sellerNumber .overlay');
+    var productOwner = document.querySelector('#sellerNumber .number');
+    
+    productOverlay.addEventListener('click', () => {
+    productOverlay.style.display = 'none';
+    productOwner.style.display = 'block' 
+    });
+  </script>
+  <script src="js/modules/carousel.js"></script>
   <script src="js/main.js"></script>
 </html>
