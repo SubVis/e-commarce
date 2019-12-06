@@ -1,0 +1,47 @@
+// Variables
+    
+$main-indigo: #7420A3
+$main-yellow: rgb(255, 208, 0)
+$main-indigo-gradient: linear-gradient(to left, rgba(116, 32, 163, 1), rgba(116, 32, 163, 1), rgba(116, 32, 163, 0.75) )
+$main-yellow-gradient: linear-gradient(to left, rgba(163, 139, 32, 1), rgba(163, 139, 32, 1), rgba(163, 139, 32, 0.75) )
+
+// Mixins
+@mixin btn($coulor)
+    color: white
+    background-image: $coulor
+    border-radius: 40px 
+    padding: 5px 15px
+    transition: all ease 0.4s
+    font-size: 18px
+    outline: none
+    
+    &:focus
+        outline: none   
+    &:hover
+        transform: translateY(-5px)
+
+
+@mixin inCenter()
+    position: absolute
+    top: 50%
+    left: 50%
+    transform: translate(-50%, -50%)
+
+// Classes
+.color
+    color: $main-indigo
+
+.header
+    border-bottom: 2px solid $main-indigo
+    padding-bottom: 5px
+    padding-left: 15px
+    display: inline-block
+    font-weight: 400
+    font-size: 25px
+    margin: 10px 0
+
+
+button.indigo, a.btn.indigo
+    @include btn($main-indigo-gradient)
+button.yellow, a.btn.yellow
+    @include btn($main-yellow-gradient)
