@@ -1,19 +1,15 @@
-mixin select(label , options)
-    .input.px-2.my-2(class="w-full md:w-1/2 lg:w-1/3")
-        p.my-2.font-bold.title اللون:
-        select#slim-select.js-choice(dir="rtl" name="model")
-            optgroup
-                - for (let i= 0; i< options.length; ++i){
-                    option(value=i+1)=options[i]
-                -   }
-        p.help-block.help هذا الحقل مطلوب. 
-
-mixin selectWithOutClassese(labelClasses,label,selectName,options,hint)
-    .px-2(class="w-full sm:w-1/2md:w-1/5")
-        label(for=selectName class=labelClasses).mb-5.font-bold.title=label
-        select#slim-select.js-choice(dir="rtl" name=selectName)
-            optgroup
-                - for (let i= 0; i< options.length; ++i){
-                    option(value=i+1)=options[i]
-                -   }
-        p.help-block.help=hint
+mixin textInput(label, placeholder)
+    .input.px-2.my-2(class="w-full md:w-1/2 lg:w-1/3 ")
+        p.my-2.font-bold.title(class="m-2")=label
+        .x.flex-grow
+            input(type="text", placeholder=placeholder)
+            p.help-block.help هذا الحقل مطلوب.
+            
+mixin select(label,selectName, selectPlaveholder,options)
+    div(class="w-full  md:w-1/2 lg:w-1/3  my-2 px-2")
+        label(for=selectName class="my-2 inline-block font-bold title pl-2")=label
+        select(data-placeholder=selectPlaveholder ,  class="chosen-select" , name=selectName, id=selectName)&attributes(attributes)
+            - for (let i= 0; i< options.length; ++i){
+                option(value=options[i][0])=options[i][1]
+            -   }
+        p.help-block.help  هذا الحقل مطلوب.

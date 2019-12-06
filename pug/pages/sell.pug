@@ -1,7 +1,16 @@
 <!DOCTYPE html>
 html(lang="ar", dir="rtl")
-    include ../utils/head
-    +head('عاملة كام | بيع')
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(http-equiv="X-UA-Compatible", content="ie=edge")
+        link(rel="stylesheet", href="./css/app.css")
+        link(rel="stylesheet", href="./js/libs/choosen/chosen.min.css")
+
+        link(href="https://fonts.googleapis.com/css?family=Almarai:300,400,700,800&display=swap&subset=arabic", rel="stylesheet")
+        script(src="https://kit.fontawesome.com/7ccf14bcd9.js")
+
+        title عاملة كام | بيع
     body
         include ../components/navbar
         +nav(['','','active','',''])
@@ -10,38 +19,34 @@ html(lang="ar", dir="rtl")
         .container.mx-auto.overflow-x-hidden.pb-32
             include ../utils/header
             +header(' بكل سهولة هتقدر تعلن عن عربيتك ببلاش')
-            .flex.flex-wrap.px-5.-mx-2
-                p.header المعلومات الأساسية
-                form(action="#" ,method="post")
+            p.header المعلومات الأساسية
+            .flex.flex-wrap.px-2
+                form.-mx-2(action="#" ,method="post")(class="w-full")
                     .flex.flex-wrap.w-full.px-2.inputs
-                        .input.px-2.my-2(class="w-full md:w-1/2 lg:w-1/3")
-                            p.my-2.font-bold.title عنوان الإعلان:
-                            input(type="text", placeholder='مثال: فيات 98 بحالة ممتازة')
-                            p.help-block.help هذا الحقل مطلوب.
-                        +select('الماركة:', ['-- اختر -- ' , 'ماركة','ماركة','ماركة','ماركة','ماركة','ماركة','ماركة' ])                   
-                        +select('موديل:', ['سنة' , 'سنة','سنة','سنة','سنة','سنة','سنة' ])                   
-                                 
+                        +textInput('عنوان الإعلان:', 'مثال: فيات 98 بحالة ممتازة')
+
+                        +select('الماركة:', 'brand','-- اختر -- ',[ ['val','ماركة'],['val','ماركة'],['val','ماركة'],['val','ماركة'],['val','ماركة'],['val','ماركة'] ] )  
+                    
+                        +select('موديل:', 'model','سنة', [ ['val','سنة'],['val','سنة'],['val','سنة'],['val','سنة'],['val','سنة'] ])                   
+                            
+                        +textInput('سعة المحرك:', 'مثال: 1400 ')
+
                         
-                        .input.px-2.my-2(class="w-full md:w-1/2 lg:w-1/3")
-                            p.my-2.font-bold.title سعة المحرك:
-                            input(type="text", placeholder='مثال: 1400 ')
-                            p.help-block.help هذا الحقل مطلوب.              
+                        +select('المدينة:', 'town',  'اختار مدينتك' , [ ['val','مدينة'], ['val','مدينة'], ['val','مدينة'], ['val','مدينة'], ['val','مدينة'], ['val','مدينة]' ]] )                   
 
-                        +select('المدينة:', ['اختار مدينتك' , 'مدينة', 'مدينة', 'مدينة', 'مدينة', 'مدينة', 'مدينة' ])                   
-                           
-                        .input.px-2.my-2(class="w-full md:w-1/2 lg:w-1/3")
-                            p.my-2.font-bold.title المسافة(كم):
-                            input(type="text", placeholder='مثال: 1400 ')
-                            p.help-block.help هذا الحقل مطلوب.
+                        +textInput('سعة المحرك:', 'مثال: 1400 ')         
 
-                        +select('ناقل الحركة:', ['اختار نوع الناقل', "نوع", "نوع", "نوع", "نوع" ])                  
-                        +select('الوقود:', ['اختار نوع الوقود' , "وقود", "وقود", "وقود", "وقود", "وقود", "وقود" ])                   
-                        +select('اللون:', ['اختار لون العربية' , 'لون','لون','لون','لون','لون','لون','لون'])        
+                        +textInput('المسافة (كم):', 'مثال: 1400 ')         
 
-                        .input.px-2.my-2(class="w-full md:w-1/2 lg:w-1/3")
-                            p.my-2.font-bold.title السعر:
-                            input(type="text", placeholder='هتبيع بكام؟')
-                            p.help-block.help هذا الحقل مطلوب.                            
+                        +select('ناقل الحركة:', 'transmission','اختار نوع الناقل' ,[['val', "نوع"], ['val', "نوع", ],['val', "نوع", ],['val', "نوع" ]] )                  
+                    
+                        +select('الوقود:', 'fuel','اختار نوع الوقود' ,[['val', "وقود"],['val', "وقود"],['val', "وقود"],['val', "وقود"]] )                   
+                    
+                        +select('اللون:', 'color','اختار لون العربية' ,[['val', 'لون'],['val', 'لون'],['val', 'لون'],['val', 'لون'],['val', 'لون']] )        
+                        
+                        +textInput('السعر:', 'هتبيع بكام؟')         
+                        
+
                         .input.px-2.my-2(class="w-full md:w-1/2 lg:w-2/3")
                             p.my-2.font-bold.title تفاصيل أكتر:
                             textarea#details(name="details", width="100%",cols="30", rows="3", placeholder='حاجات الزبون هيكون عايز يعرفها مثال: حالة الكوتشات, المساعدين, عاملة عمرة,الخ...')
@@ -49,7 +54,8 @@ html(lang="ar", dir="rtl")
                         a.btn.mx-auto.my-5.self-center(href="sell2.html") التالي
             
         include ../components/footer
-    script(src="./js/lib/Choices.js")
-    script(src="./js/modules/choicesConfig.js")
-    
-    script(src="./js/main.js")
+        script(src="./js/libs/jquery.slim.js")
+        script(src="./js/libs/choosen/chosen.jquery.min.js")
+        script(src="./js/modules/chooseModule.js")
+        
+        script(src="./js/main.js")
