@@ -3,51 +3,34 @@
     .-mx-2
         form(action="#", method="post").inputs.flex.px-2.flex-wrap
             include ../utils/Selcetion
-            .px-2(class="w-full sm:w-1/2 md:w-1/5 ")
-                //- labelClasses,label,selectName,options,hint
-                +select('','الماركة:','brand', ['--اختر--','شيء','شيء','شيء','شيء'])
-            .px-2(class="w-full mt-2 sm:w-1/2 md:w-1/5")
-                //- labelClasses,label,selectName,options,hint
-                +select('','الموديل:','model', ['--اختر--','شيء','شيء','شيء','شيء'])
-            .px-2(class="w-full mt-2 sm:w-1/2 md:w-1/5")
-                //- labelClasses,label,selectName,options,hint
-                +select('','المحافظة:','لovernorate', ['--اختر--','شيء','شيء','شيء','شيء'])
-            .px-2(class="w-full mt-2 sm:w-1/2 md:w-1/5")
-                //- labelClasses,label,selectName,options,hint
-                +select('','نوع الهيكل:','outfitType', ['--اختر--','شيء','شيء','شيء','شيء'])
-            .px-2(class="w-full mt-2 sm:w-1/2 md:w-1/5")
-                //- labelClasses,label,selectName,options,hint
-                +select('','نوع الناقل:','transmissionType', ['--اختر--','شيء','شيء','شيء','شيء'])
+            +select('الماركة:', 'brand','--اختر--' ,[['val', 'لون'],['val', 'لون'],['val', 'لون'],['val', 'لون'],['val', 'لون']] )        
+            +select('الموديل:', 'model','--اختر--' ,[['val', 'لون'],['val', 'لون'],['val', 'لون'],['val', 'لون'],['val', 'لون']] )        
+            +select('المحافظة:', 'governorate','--اختر--' ,[['val', 'لون'],['val', 'لون'],['val', 'لون'],['val', 'لون'],['val', 'لون']] )        
+            +select('نوع الهيكل:', 'outfitType','--اختر--' ,[['val', 'لون'],['val', 'لون'],['val', 'لون'],['val', 'لون'],['val', 'لون']] )        
+            +select('نوع الناقل:', 'transmissionType','--اختر--' ,[['val', 'لون'],['val', 'لون'],['val', 'لون'],['val', 'لون'],['val', 'لون']] )        
+            
             .px-2.flex.justify-between(class="w-full mt-2 md:w-1/2 lg:w-2/5")
-                //- labelClasses,label,selectName,options,hint
                 .px-2(class="w-full")
                     label.my-2.font-bold.title السعر:
                     .flex
-                        select#slim-select.js-choice(dir="rtl" name='salaryFrom')
-                            optgroup
-                                option(value=1) من
-                                option(value=2) شيء
-                                option(value=3) شيء
-                        select#slim-select.js-choice(dir="rtl" name='salaryTo')
-                            optgroup
-                                option(value=1) إلى
-                                option(value=2) شيء
-                                option(value=3) شيء
+                        select.w-full(data-placeholder="من" , name="salaryFrom", id="salaryFrom")
+                            option شيء2
+                            option شيء 1
+                        select.w-full(data-placeholder="إلى" , name="salaryTo", id="salaryTo")
+                            option 1شيء
+                            option شيء 2
+
             .px-2.flex.justify-between(class="w-full mt-2 sm:w-1/2 md:w-2/5")
                 //- labelClasses,label,selectName,options,hint
                 .px-2(class="w-full")
                     label.my-2.font-bold.title سنة الصنع:
                     .flex.flex-justify-between
-                        select#slim-select.js-choice(dir="rtl" name='salaryFrom')
-                            optgroup
-                                option(value=1) من
-                                option(value=2) شيء
-                                option(value=3) شيء
-                        select#slim-select.js-choice(dir="rtl" name='salaryTo')
-                            optgroup
-                                option(value=1) إلى
-                                option(value=2) شيء
-                                option(value=3) شيء
+                        select.w-full(data-placeholder="من" , name="salaryFrom", id="salaryFrom")
+                            option شيء
+                            option شيء 
+                        select.w-full(data-placeholder="إلى" , name="salaryTo", id="salaryTo")
+                            option شيء
+                            option شيء 
 
             .px-2.mt-4.flex.justify-center.items-end.flex-grow
                 button(type="submit").indigo.px-32 بحث   
