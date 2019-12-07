@@ -5,8 +5,8 @@ html(lang="ar", dir="rtl")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
         meta(http-equiv="X-UA-Compatible", content="ie=edge")
         link(rel="stylesheet", href="./css/app.css")
-        link(rel="stylesheet", href="./js/libs/choosen/chosen.min.css")
-
+        link(rel="stylesheet", href="./css/selection.css")
+        
         link(href="https://fonts.googleapis.com/css?family=Almarai:300,400,700,800&display=swap&subset=arabic", rel="stylesheet")
         script(src="https://kit.fontawesome.com/7ccf14bcd9.js")
 
@@ -27,7 +27,7 @@ html(lang="ar", dir="rtl")
 
                         +select('الماركة:', 'brand','-- اختر -- ',[ ['val','ماركة'],['val','ماركة'],['val','ماركة'],['val','ماركة'],['val','ماركة'],['val','ماركة'] ] )  
                     
-                        +select('موديل:', 'model','سنة', [ ['val','سنة'],['val','سنة'],['val','سنة'],['val','سنة'],['val','سنة'] ])                   
+                        +select('موديل:', 'model','سنة', [ ['val','1سنة'],['val','2'],['val','3'],['val','4'],['val','سنة'] ])                   
                             
                         +textInput('سعة المحرك:', 'مثال: 1400 ')
 
@@ -45,7 +45,7 @@ html(lang="ar", dir="rtl")
                         +select('اللون:', 'color','اختار لون العربية' ,[['val', 'لون'],['val', 'لون'],['val', 'لون'],['val', 'لون'],['val', 'لون']] )        
                         
                         +textInput('السعر:', 'هتبيع بكام؟')         
-                        
+
 
                         .input.px-2.my-2(class="w-full md:w-1/2 lg:w-2/3")
                             p.my-2.font-bold.title تفاصيل أكتر:
@@ -55,7 +55,18 @@ html(lang="ar", dir="rtl")
             
         include ../components/footer
         script(src="./js/libs/jquery.slim.js")
-        script(src="./js/libs/choosen/chosen.jquery.min.js")
-        script(src="./js/modules/chooseModule.js")
-        
+        //- PrettyDropdowns.js library for selectboxes
+        script(src="./js/libs/select/jquery.prettydropdowns.js")
+        //- Configration for selectboxes
+        //- script(src="./js/modules/chooseModule.js")
+        script.
+            $(document).ready(function() {
+                // Initiate Pretty Dropdowns
+                $('.oneChoice').prettyDropdown({
+                    width: "100%",
+
+                });
+            });
+
+        //- The global js
         script(src="./js/main.js")

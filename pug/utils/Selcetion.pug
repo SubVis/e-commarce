@@ -8,7 +8,7 @@ mixin textInput(label, placeholder)
 mixin select(label,selectName, selectPlaveholder,options)
     div(class="w-full  md:w-1/2 lg:w-1/3  my-2 px-2")
         label(for=selectName class="my-2 inline-block font-bold title pl-2")=label
-        select(data-placeholder=selectPlaveholder ,  class="chosen-select" , name=selectName, id=selectName)&attributes(attributes)
+        select.w-full(data-placeholder=selectPlaveholder , name=selectName, id=selectName)&attributes(attributes)
             - for (let i= 0; i< options.length; ++i){
                 option(value=options[i][0])=options[i][1]
             -   }

@@ -1,6 +1,6 @@
-$(".chosen-select").chosen({
-    rtl: true,
-    no_results_text: "لا توجد نتائج",
-    display_selected_options: false
-
-}); 
+$(document).ready(function() {
+    $('select.multiple').prettyDropdown({
+        width: "100%",
+        multiDelimiter: " -- "
+    });
+})

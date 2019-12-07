@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link rel="stylesheet" href="./css/app.css"/>
-    <link rel="stylesheet" href="./js/libs/choosen/chosen.min.css"/>
+    <link rel="stylesheet" href="./css/selection.css"/>
     <link href="https://fonts.googleapis.com/css?family=Almarai:300,400,700,800&amp;display=swap&amp;subset=arabic" rel="stylesheet"/>
     <script src="https://kit.fontawesome.com/7ccf14bcd9.js"></script>
     <title>عاملة كام | بيع</title>
@@ -56,7 +56,7 @@
         <form class="flex flex-wrap" action="#" method="method">
           <div class="one w-full my-2 px-2">
             <label class="font-bold text-xl color inline-block mb-2">وسائل الراحة</label>
-            <select class="chosen-select" data-placeholder="اختر وسائل الراحة المتاحة في سيارتك" multiple="multiple">
+            <select class="multiple" data-placeholder="اختر وسائل الراحة المتاحة في سيارتك" multiple="multiple">
               <option value="airconetion">المكيف</option>
               <option value="remoteControl">ريموت كنترول</option>
               <option value="openRoof">فتحة سقف</option>
@@ -70,7 +70,7 @@
           </div>
           <div class="two w-full my-2 px-2">
             <label class="font-bold text-xl color inline-block mb-2" for="choices-multiple-default ">نوافذ</label>
-            <select class="chosen-select" data-placeholder="اختر الميزات الموجودة في نوافذ السيارة" multiple="multiple">
+            <select class="multiple" data-placeholder="اختر الميزات الموجودة في نوافذ السيارة" multiple="multiple">
               <option value="airconetion">نوافذ كهربائية أمامية</option>
               <option value="remoteControl">ريموت نوافذ كهربائية خلفية</option>
               <option value="openRoof">زجاج فاميه</option>
@@ -78,7 +78,7 @@
           </div>
           <div class="three w-full my-2 px-2">
             <label class="font-bold text-xl color inline-block mb-2">نظام الصوت</label>
-            <select class="chosen-select" data-placeholder="اختر نظام الصوت المتاحة في سيارتك" multiple="multiple">
+            <select class="multiple" data-placeholder="اختر نظام الصوت المتاحة في سيارتك" multiple="multiple">
               <option value="radio">راديو كاسيت</option>
               <option value="cd">مبدل أقراص</option>
               <option value="dvd">مشغل دي في دي</option>
@@ -91,7 +91,7 @@
           </div>
           <div class="four w-full my-2 px-2">
             <label class="font-bold text-xl color inline-block mb-2">وسائل الأمان</label>
-            <select class="chosen-select" data-placeholder="اختر وسائل الأمان المتاحة في سيارتك" multiple="multiple">
+            <select class="multiple" data-placeholder="اختر وسائل الأمان المتاحة في سيارتك" multiple="multiple">
               <option value="ABS">نظام الفرامل المانع للإنزلاق-ABS</option>
               <option value="driverAirBag">وسادة هوائية للسائق</option>
               <option value="passAirBag">وسادة هوائية للركاب</option>
@@ -106,7 +106,7 @@
           </div>
           <div class="five w-full my-2 px-2">
             <label class="font-bold text-xl color inline-block mb-2">مميزات أخرى</label>
-            <select class="chosen-select" data-placeholder="اخترالمميزات أخرى المتاحة في سيارتك" multiple="multiple">
+            <select class="w-full multiple" data-placeholder="اخترالمميزات أخرى المتاحة في سيارتك" multiple="multiple">
               <option value="jnot">جنوط</option>
               <option value="elecChairs">مقاعد كهربائية</option>
               <option value="alert">إنذار</option>
@@ -175,10 +175,10 @@
         </div>
       </div>
     </footer>
-    <script src="./js/modules/ImagePreview.js"></script>
     <script src="./js/libs/jquery.slim.js"></script>
-    <script src="./js/libs/choosen/chosen.jquery.min.js"></script>
+    <script src="./js/libs/select/jquery.prettydropdowns.js"></script>
     <script src="./js/modules/chooseModule.js"></script>
+    <script src="./js/modules/ImagePreview.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

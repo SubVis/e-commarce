@@ -4,7 +4,7 @@
   "description": "E-commerce for buying cars",
   "main": "public/index.html",
   "scripts": {
-    "build": "postcss css/bundler.css -o public/css/app.css -w",
+    "build": "postcss css/selection.css -o public/css/selection.css && postcss css/bundler.css -o public/css/app.css",
     "pug": "pug --watch pug/pages -o public --pretty",
     "sass": "sass --watch sass:css",
     "git": "git add . && git commit -m",
