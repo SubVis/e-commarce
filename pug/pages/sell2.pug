@@ -7,95 +7,54 @@ html(lang="ar", dir="rtl")
         link(rel="stylesheet", href="./css/app.css")
         link(rel="stylesheet", href="./css/selection.css")
 
-        link(href="https://fonts.googleapis.com/css?family=Almarai:300,400,700,800&display=swap&subset=arabic", rel="stylesheet")
-        script(src="https://kit.fontawesome.com/7ccf14bcd9.js")
+        //- link(href="https://fonts.googleapis.com/css?family=Almarai:300,400,700,800&display=swap&subset=arabic", rel="stylesheet")
+        //- script(src="https://kit.fontawesome.com/7ccf14bcd9.js")
 
         title عاملة كام | بيع
     body
         include ../components/navbar
         +nav(['','','active','',''])
         .container.mx-auto.pb-32
-            .px-4
-                include ../utils/header
-                +header(' بكل سهولة هتقدر تعلن عن عربيتك ببلاش')                
-                p.header الصور
-                include ../components/imageForm
-            
-            .px-4.mt-12
-                p.header التجهيزات
-                form(action="#" method="method").flex.flex-wrap
+            form(enctype='multipart/form-data', method='post', action="#")
+                .px-4
+                    include ../utils/header
+                    +header(' بكل سهولة هتقدر تعلن عن عربيتك ببلاش')                
+                    p.header الصور
+                    include ../components/imageForm
                 
-                    .one(class="w-full my-2 px-2")
-                        label.font-bold.text-xl.color.inline-block.mb-2 وسائل الراحة
-                        select.multiple(data-placeholder="اختر وسائل الراحة المتاحة في سيارتك", multiple)
-                            option(value="airconetion") المكيف
-                            option(value="remoteControl") ريموت كنترول
-                            option(value="openRoof") فتحة سقف
-                            option(value="electricMirrors") مرايات كهرباء
-                            option(value="closeMirors") مرايات ضم, غلق
-                            option(value="leather") فرش جلد
-                            option(value="normal") فرش قماش
-                            option(value="power") باور
-                            option(value="AiParking") النظام الذكي لركن السيارات
-                
-                    .two(class="w-full my-2 px-2")
-                        label.font-bold.text-xl.color.inline-block.mb-2(for="choices-multiple-default ") نوافذ
-                        select.multiple(data-placeholder="اختر الميزات الموجودة في نوافذ السيارة", multiple)
-                            option(value="airconetion") نوافذ كهربائية أمامية
-                            option(value="remoteControl") ريموت نوافذ كهربائية خلفية
-                            option(value="openRoof") زجاج فاميه
-     
-                    .three(class="w-full my-2 px-2")
-                        label.font-bold.text-xl.color.inline-block.mb-2 نظام الصوت
-                        select.multiple(data-placeholder="اختر نظام الصوت المتاحة في سيارتك", multiple)
-                            option(value="radio") راديو كاسيت
-                            option(value="cd") مبدل أقراص
-                            option(value="dvd") مشغل دي في دي
-                            option(value="cdPlayer") مشغل اسطوانات
-                            option(value="aux") مدخل AUX
-                            option(value="usb") مدخل USB
-                            option(value="blue") بلوتوث
-                            option(value="aIcontrol") نظام تحكم في الطارة
+                    .mt-12
+                        p.header التجهيزات
+                        include ../utils/Selcetion
 
-                    .four(class="w-full my-2 px-2")
-                        label.font-bold.text-xl.color.inline-block.mb-2 وسائل الأمان
-                        select.multiple(data-placeholder="اختر وسائل الأمان المتاحة في سيارتك", multiple)
-                            option(value="ABS") نظام الفرامل المانع للإنزلاق-ABS
-                            option(value="driverAirBag") وسادة هوائية للسائق
-                            option(value="passAirBag") وسادة هوائية للركاب
-                            option(value="sideAirbag") وسادة هوائية جانبية
-                            option(value="ebd") نظام توزيع قوى الفرامل EBD
-                            option(value="sensors") حساسات
-                            option(value="esp") ESP
-                            option(value="frontSensors") حساسات أمامية
-                            option(value="backSensors") حساسات خلفية
-                            option(value="embloys") نظام ايموبليزر ضد السرقة
-                    .five(class="w-full my-2 px-2")
-                        label.font-bold.text-xl.color.inline-block.mb-2 مميزات أخرى
-                        select.w-full.multiple(data-placeholder="اخترالمميزات أخرى المتاحة في سيارتك", multiple)
-                            option(value="jnot") جنوط
-                            option(value="elecChairs") مقاعد كهربائية
-                            option(value="alert") إنذار
-                            option(value="lights") كشافات ضباب
-                            option(value="backCamera") كاميرا خلفية
-                            option(value="GPS") GPS
-                            option(value="speenConsest") مثبت السرعة
-                            option(value="lock") قفل مركزي للابواب
-                            option(value="spoiler") سبويلر خلفي
-                          
+                        .flex.flex-wrap
+                            .one(class="w-full my-2 px-2")
+                                +multiSelect("وسائل الراحة","comfort", ["وسائل الراحة" ,"المكيف" ," ريموت كنترول", " فتحة سقف", " مرايات كهرباء", " مرايات ضم, غلق", " فرش جلد", "فرش قماش", "باور", " النظام الذكي لركن السيارات",])
                         
-                    button.indigo.mx-auto.my-8.px-16.mx-auto(type="submit") خلاص
+                            .two(class="w-full my-2 px-2")
+                                +multiSelect("نوافذ","windows",["نوافذ" ,"نوافذ كهربائية أمامية", "ريموت نوافذ كهربائية خلفية", "زجاج فاميه"])
+
+            
+                            .three(class="w-full my-2 px-2")
+                                +multiSelect("نظام الصوت","soundSys", ["نظام الصوت","راديو كاسيت", "مبدل أقراص", "مشغل دي في دي", "مشغل اسطوانات", "مدخل AUX", "مدخل USB", "بلوتوث", "نظام تحكم في الطارة"])
                     
-                    
+
+                            .four(class="w-full my-2 px-2")
+                                +multiSelect("وسائل الأمان","security", ["وسائل الأمان","نظام الفرامل المانع للإنزلاق-ABS","وسادة هوائية للسائق","وسادة هوائية للركاب","وسادة هوائية جانبية","نظام توزيع قوى الفرامل EBD","حساسات","ESP","حساسات أمامية","حساسات خلفية","نظام ايموبليزر ضد السرقة",])
+
+                            .five(class="w-full my-2 px-2")
+                                +multiSelect("مميزات أخرى","others", ["مميزات أخرى", "جنوط","مقاعد كهربائية", "إنذار", "كشافات ضباب", "كاميرا خلفية", "GPS", "مثبت السرعة", "قفل مركزي للابواب"," سبويلر خلفي" ])
+
+                                
+                            button.indigo.mx-auto.my-8.px-16.mx-auto(type="button", id="dsa") خلاص
+                        
+                        
 
         include ../components/footer
 
         //- Jquery
         script(src="./js/libs/jquery.slim.js")
-        //- PrettyDropdowns.js library for selectboxes
-        script(src="./js/libs/select/jquery.prettydropdowns.js")
         //- Configration for selectboxes
-        script(src="./js/modules/chooseModule.js")
+        script(src="./js/modules/selectbox/multi.js")
         //- Image Uploader plugin
         script(src="./js/modules/ImagePreview.js")
         //- The global js

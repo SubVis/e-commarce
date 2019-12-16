@@ -1,236 +1,90 @@
-@import '_utilities'
+@import "_utilities"
 
-.prettydropdown
-  position: relative
-  min-width: 72px
+*
+    direction: rtl
 
-  // 70px + borders
-  display: inline-block
-
-  &.loading
-    min-width: 0
-
-    > ul
-      visibility: hidden
-      white-space: nowrap
-
-  > ul
-    position: absolute
-    top: 0
-    left: 0
-    background: #fff
-    border: 1px solid #eeeeee
+.replacement
+    max-height: 45px //  should equal the -input height */
+    overflow: hidden //  important to have this to hide the list */
+    overflow-y: hidden //  important to have this to hide the list */
     border-radius: 10px
-    box-sizing: content-box
-    color: #000
-    cursor: pointer
-    font: normal 14px
-    list-style-type: none
-    margin: 0
-    padding: 0
-    text-align: left
-    -webkit-user-select: none
+    border: 1px solid #eee
+    border-radius: 10px //  The border-radius goes here DON'T PUT BORDER-RADUIS FO THE INPUT */
 
-    // Chrome all / Safari all
-    -moz-user-select: none
+    &:hover, &:focus
+        border-color: $main-indigo //  The border goes here DON'T PUT BORDER FO THE INPUT */
 
-    // Firefox all
-    -ms-user-select: none
+        transition: all 0.5s ease-in-out //  To add smooth effect when you open the dropdown */
 
-    // IE 10+
-    user-select: none
+    *
+        cursor: pointer
 
-    // Likely future
-    z-index: 1
+    &.checked
+        border: 2px solid green
 
-  > ul:focus
-    border-color: $main-indigo
+    &-opened
+        max-height: 200px
+        overflow-y: scroll //  important to have this to hide the list */
 
-  &:not(.disabled) > ul
-    &:hover
-      border-color: $main-indigo
-
-    &.active
-      width: auto
-      max-height: none !important
-      border-color: $main-indigo
-      overflow-x: hidden
-      overflow-y: auto
-      z-index: 99
-
-  > ul
-    &.active
-      &:focus
+    input.replacement-input
+        resize: vertical
         outline: none
+        color: black
+        padding: 10px 10px !important
+        margin: 0px 0px !important
+        width: 100%
+        border: 0 !important
+        border-bottom: 1px solid #eee !important
+        border-radius: 0
 
-      &.reverse
-        top: auto
-        bottom: 0
+        &::-moz-placeholder
+            color: #a9a9a9
+            opacity: 1
+        &:-ms-input-placeholder
+            color: #a9a9a9
+        &::-webkit-input-placeholder
+            color: #a9a9a9
 
-    > li
-      position: relative
-      min-width: 70px
-      height: 48px
+    &-ul
+        list-style: none
+        padding: 0
+        margin: 0
 
-      // 50px - borders
-      border-top: 1px solid transparent
-      border-bottom: 1px solid transparent
-      box-sizing: border-box
-      display: none
-      line-height: 46px
+        background-color: #eeeeee
 
-      // 48px - borders
-      margin: 0
-      padding-right: 0.8rem
+        &--li
+            transition: all 0.2s ease
+            color: white
+            padding: 10px
+            display: flex
+            justify-content: space-between
+            align-items: center
+            color: black
+            border-bottom: 1px solid #eeeeee
+            &:last-child
+                border-bottom: 0px
 
-  &.loading > ul > li
-    min-width: 0
-    display: block
-    padding-right: 0.8rem
+            &:hover
+                background-color: $main-indigo
+                color: white
 
-  > ul
-    &:not(.active) > li:not(.selected):first-child
-      visibility: hidden
+            &.checked
+                color: white
+                background-color: $main-indigo
 
-      // Prevent FOUC
-
-    > li:first-child
-      display: block
-
-    &.active > li
-      display: block
-
-      &:not(.label):hover, &.hover:not(.label), &:first-child:hover:after
-        background: $main-indigo
-        color: #fff
-
-      &.nohover
-        background: inherit !important
-        color: inherit !important
-
-      &.hover:before, &.nohover:after
-        border-top-color: #fff !important
-
-      &.hover:after, &.nohover:before
-        border-top-color: $main-indigo !important
-
-  &.arrow
-    > ul > li.selected
-      &:before, &:after
-        position: absolute
-        top: 8px
-        bottom: 0
-        left: 8px
-        height: 16px
-        border: 8px solid transparent
-
-        // Arrow size
-        box-sizing: border-box
-        content: ''
-        display: block
-        margin: auto
-
-    &.small
-      > ul > li.selected
-        &:before, &:after
-          top: 4px
-          height: 8px
-          border-width: 4px
-
-      > ul > li.selected:after
-        top: 2px
-
-        // Chevron thickness
-
-    > ul > li.selected
-      &:before
-        border-top-color: #a9a9a9
-
-        // Arrow color
-
-      &:after
-        top: 4px
-
-        // Chevron thickness
-        border-top-color: #fff
-
-        // Match background colour
-
-    &.triangle > ul > li.selected:after
-      content: none
-
-  > ul
-    &:hover > li.selected:before
-      border-top-color: #7f7f7f
-
-    &.active > li.selected
-      &:before, &:after
-        border: none
-
-    &:not(.active) > li > span.checked
-      display: none
-
-  &.multiple > ul > li.selected
-    overflow: hidden
-    padding-right: 2rem
-    text-overflow: ellipsis
-    white-space: nowrap
-
-  > ul > li
-    > span.checked
-      clear: both
-      float: left
-      font-weight: bold
-      margin-left: 0.8rem
-
-    &.label
-      cursor: default
-      font-weight: bold
-
-      &:first-child
-        border-top: none
-
-  &.classic
-    > ul > li.label ~ li.selected
-      border-top: none
-
-    > ul
-      &.active > li.label ~ li:not(.label)
-        padding-right: 1.6rem
-
-      &:not(.active) > li.selected:not(:first-child)
-        position: absolute
-        top: 0
-        display: block
-
-  > ul > li.label ~ li:not(.label):not(.selected)
-    padding-right: 1.6rem
-
-  &.disabled
-    opacity: 0.3
-
-    > ul > li
-      cursor: not-allowed
-
-  > ul > li.disabled
-    opacity: 0.3
-
-  > ul > li.disabled
-    cursor: not-allowed
-
-  &.multiple > ul
-    > li.selected + li, &.reverse > li.selected
-      border-top-color: #dedede
-
-  > ul > li.label
-    border-top-color: #dedede
-
-    ~ li.selected
-      border-top-color: #dedede
-
-  direction: rtl !important
-  text-align: right
-
-  *
-    direction: rtl !important
-    text-align: right
+                .checker
+                    border: 1px solid black
+                    width: 10px
+                    height: 10px
+                    display: inline-block
+                    &.checked
+                        background-color: $main-yellow
+                        color: black
+            .checker
+                border: 1px solid black
+                width: 10px
+                height: 10px
+                display: inline-block
+                &.checked
+                    background-color: $main-indigo
+                    color: black

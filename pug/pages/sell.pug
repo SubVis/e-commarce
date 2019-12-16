@@ -7,8 +7,8 @@ html(lang="ar", dir="rtl")
         link(rel="stylesheet", href="./css/app.css")
         link(rel="stylesheet", href="./css/selection.css")
         
-        link(href="https://fonts.googleapis.com/css?family=Almarai:300,400,700,800&display=swap&subset=arabic", rel="stylesheet")
-        script(src="https://kit.fontawesome.com/7ccf14bcd9.js")
+        //- link(href="https://fonts.googleapis.com/css?family=Almarai:300,400,700,800&display=swap&subset=arabic", rel="stylesheet")
+        //- script(src="https://kit.fontawesome.com/7ccf14bcd9.js")
 
         title عاملة كام | بيع
     body
@@ -21,28 +21,28 @@ html(lang="ar", dir="rtl")
             +header(' بكل سهولة هتقدر تعلن عن عربيتك ببلاش')
             p.header المعلومات الأساسية
             .flex.flex-wrap.px-2
-                form.-mx-2(action="#" ,method="post")(class="w-full")
+                form(action="#", method="post", class="w-full -mx-2")
                     .flex.flex-wrap.w-full.px-2.inputs
                         +textInput('عنوان الإعلان:', 'مثال: فيات 98 بحالة ممتازة')
 
-                        +select('الماركة:', 'brand','-- اختر -- ',[ ['val','ماركة'],['val','ماركة'],['val','ماركة'],['val','ماركة'],['val','ماركة'],['val','ماركة'] ] )  
+                        +select('الماركة:', 'brand','-- اختر -- ', [ '1سنة','2','3','4','سنة' ] )  
                     
-                        +select('موديل:', 'model','سنة', [ ['val','1سنة'],['val','2'],['val','3'],['val','4'],['val','سنة'] ])                   
+                        +select('موديل:', 'model','سنة', [ '1سنة','2','3','4','سنة' ])                   
                             
                         +textInput('سعة المحرك:', 'مثال: 1400 ')
 
                         
-                        +select('المدينة:', 'town',  'اختار مدينتك' , [ ['val','مدينة'], ['val','مدينة'], ['val','مدينة'], ['val','مدينة'], ['val','مدينة'], ['val','مدينة]' ]] )                   
+                        +select('المدينة:', 'town',  'اختار مدينتك' ,  [ '1سنة','2','3','4','سنة' ])                   
 
                         +textInput('سعة المحرك:', 'مثال: 1400 ')         
 
                         +textInput('المسافة (كم):', 'مثال: 1400 ')         
 
-                        +select('ناقل الحركة:', 'transmission','اختار نوع الناقل' ,[['val', "نوع"], ['val', "نوع", ],['val', "نوع", ],['val', "نوع" ]] )                  
+                        +select('ناقل الحركة:', 'transmission','اختار نوع الناقل' , [ '1سنة','2','3','4','سنة' ])                  
                     
-                        +select('الوقود:', 'fuel','اختار نوع الوقود' ,[['val', "وقود"],['val', "وقود"],['val', "وقود"],['val', "وقود"]] )                   
+                        +select('الوقود:', 'fuel','اختار نوع الوقود' , [ '1سنة','2','3','4','سنة' ] )                   
                     
-                        +select('اللون:', 'color','اختار لون العربية' ,[['val', 'لون'],['val', 'لون'],['val', 'لون'],['val', 'لون'],['val', 'لون']] )        
+                        +select('اللون:', 'color','اختار لون العربية' , [ '1سنة','2','3','4','سنة' ] )        
                         
                         +textInput('السعر:', 'هتبيع بكام؟')         
 
@@ -51,22 +51,12 @@ html(lang="ar", dir="rtl")
                             p.my-2.font-bold.title تفاصيل أكتر:
                             textarea#details(name="details", width="100%",cols="30", rows="3", placeholder='حاجات الزبون هيكون عايز يعرفها مثال: حالة الكوتشات, المساعدين, عاملة عمرة,الخ...')
                             p.help-block.help هذا الحقل مطلوب.                            
-                        a.btn.mx-auto.my-5.self-center(href="sell2.html") التالي
+                        a.btn.mx-auto.my-5.self-center.indigo(href="sell2.html") التالي
             
         include ../components/footer
         script(src="./js/libs/jquery.slim.js")
-        //- PrettyDropdowns.js library for selectboxes
-        script(src="./js/libs/select/jquery.prettydropdowns.js")
+
         //- Configration for selectboxes
-        //- script(src="./js/modules/chooseModule.js")
-        script.
-            $(document).ready(function() {
-                // Initiate Pretty Dropdowns
-                $('.oneChoice').prettyDropdown({
-                    width: "100%",
+        script(src="./js/modules/selectbox/single.js")
 
-                });
-            });
-
-        //- The global js
         script(src="./js/main.js")

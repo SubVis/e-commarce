@@ -12,6 +12,10 @@
   margin: 10px 0;
 }
 
+.error {
+  border: 2px solid #e61e17;
+}
+
 button.indigo, a.btn.indigo {
   color: white;
   background-image: linear-gradient(to left, #7420a3, #7420a3, rgba(116, 32, 163, 0.75));
@@ -44,198 +48,99 @@ button.yellow:hover, a.btn.yellow:hover {
   transform: translateY(-5px);
 }
 
-.prettydropdown {
-  position: relative;
-  min-width: 72px;
-  display: inline-block;
-  direction: rtl !important;
-  text-align: right;
+* {
+  direction: rtl;
 }
-.prettydropdown.loading {
-  min-width: 0;
-}
-.prettydropdown.loading > ul {
-  visibility: hidden;
-  white-space: nowrap;
-}
-.prettydropdown > ul {
-  position: absolute;
-  top: 0;
-  left: 0;
-  background: #fff;
-  border: 1px solid #eeeeee;
-  border-radius: 10px;
-  box-sizing: content-box;
-  color: #000;
-  cursor: pointer;
-  font: normal 14px;
-  list-style-type: none;
-  margin: 0;
-  padding: 0;
-  text-align: left;
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-  z-index: 1;
-}
-.prettydropdown > ul:focus {
-  border-color: #7420A3;
-}
-.prettydropdown:not(.disabled) > ul:hover {
-  border-color: #7420A3;
-}
-.prettydropdown:not(.disabled) > ul.active {
-  width: auto;
-  max-height: none !important;
-  border-color: #7420A3;
-  overflow-x: hidden;
-  overflow-y: auto;
-  z-index: 99;
-}
-.prettydropdown > ul.active:focus {
-  outline: none;
-}
-.prettydropdown > ul.active.reverse {
-  top: auto;
-  bottom: 0;
-}
-.prettydropdown > ul > li {
-  position: relative;
-  min-width: 70px;
-  height: 48px;
-  border-top: 1px solid transparent;
-  border-bottom: 1px solid transparent;
-  box-sizing: border-box;
-  display: none;
-  line-height: 46px;
-  margin: 0;
-  padding-right: 0.8rem;
-}
-.prettydropdown.loading > ul > li {
-  min-width: 0;
-  display: block;
-  padding-right: 0.8rem;
-}
-.prettydropdown > ul:not(.active) > li:not(.selected):first-child {
-  visibility: hidden;
-}
-.prettydropdown > ul > li:first-child {
-  display: block;
-}
-.prettydropdown > ul.active > li {
-  display: block;
-}
-.prettydropdown > ul.active > li:not(.label):hover, .prettydropdown > ul.active > li.hover:not(.label), .prettydropdown > ul.active > li:first-child:hover:after {
-  background: #7420A3;
-  color: #fff;
-}
-.prettydropdown > ul.active > li.nohover {
-  background: inherit !important;
-  color: inherit !important;
-}
-.prettydropdown > ul.active > li.hover:before, .prettydropdown > ul.active > li.nohover:after {
-  border-top-color: #fff !important;
-}
-.prettydropdown > ul.active > li.hover:after, .prettydropdown > ul.active > li.nohover:before {
-  border-top-color: #7420A3 !important;
-}
-.prettydropdown.arrow > ul > li.selected:before, .prettydropdown.arrow > ul > li.selected:after {
-  position: absolute;
-  top: 8px;
-  bottom: 0;
-  left: 8px;
-  height: 16px;
-  border: 8px solid transparent;
-  box-sizing: border-box;
-  content: "";
-  display: block;
-  margin: auto;
-}
-.prettydropdown.arrow.small > ul > li.selected:before, .prettydropdown.arrow.small > ul > li.selected:after {
-  top: 4px;
-  height: 8px;
-  border-width: 4px;
-}
-.prettydropdown.arrow.small > ul > li.selected:after {
-  top: 2px;
-}
-.prettydropdown.arrow > ul > li.selected:before {
-  border-top-color: #a9a9a9;
-}
-.prettydropdown.arrow > ul > li.selected:after {
-  top: 4px;
-  border-top-color: #fff;
-}
-.prettydropdown.arrow.triangle > ul > li.selected:after {
-  content: none;
-}
-.prettydropdown > ul:hover > li.selected:before {
-  border-top-color: #7f7f7f;
-}
-.prettydropdown > ul.active > li.selected:before, .prettydropdown > ul.active > li.selected:after {
-  border: none;
-}
-.prettydropdown > ul:not(.active) > li > span.checked {
-  display: none;
-}
-.prettydropdown.multiple > ul > li.selected {
+
+.replacement {
+  max-height: 45px;
   overflow: hidden;
-  padding-right: 2rem;
-  text-overflow: ellipsis;
-  white-space: nowrap;
+  overflow-y: hidden;
+  border-radius: 10px;
+  border: 1px solid #eee;
+  border-radius: 10px;
 }
-.prettydropdown > ul > li > span.checked {
-  clear: both;
-  float: left;
-  font-weight: bold;
-  margin-left: 0.8rem;
+.replacement:hover, .replacement:focus {
+  border-color: #7420A3;
+  transition: all 0.5s ease-in-out;
 }
-.prettydropdown > ul > li.label {
-  cursor: default;
-  font-weight: bold;
+.replacement * {
+  cursor: pointer;
 }
-.prettydropdown > ul > li.label:first-child {
-  border-top: none;
+.replacement.checked {
+  border: 2px solid green;
 }
-.prettydropdown.classic > ul > li.label ~ li.selected {
-  border-top: none;
+.replacement-opened {
+  max-height: 200px;
+  overflow-y: scroll;
 }
-.prettydropdown.classic > ul.active > li.label ~ li:not(.label) {
-  padding-right: 1.6rem;
+.replacement input.replacement-input {
+  resize: vertical;
+  outline: none;
+  color: black;
+  padding: 10px 10px !important;
+  margin: 0px 0px !important;
+  width: 100%;
+  border: 0 !important;
+  border-bottom: 1px solid #eee !important;
+  border-radius: 0;
 }
-.prettydropdown.classic > ul:not(.active) > li.selected:not(:first-child) {
-  position: absolute;
-  top: 0;
-  display: block;
+.replacement input.replacement-input::-moz-placeholder {
+  color: #a9a9a9;
+  opacity: 1;
 }
-.prettydropdown > ul > li.label ~ li:not(.label):not(.selected) {
-  padding-right: 1.6rem;
+.replacement input.replacement-input:-ms-input-placeholder {
+  color: #a9a9a9;
 }
-.prettydropdown.disabled {
-  opacity: 0.3;
+.replacement input.replacement-input::-webkit-input-placeholder {
+  color: #a9a9a9;
 }
-.prettydropdown.disabled > ul > li {
-  cursor: not-allowed;
+.replacement-ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  background-color: #eeeeee;
 }
-.prettydropdown > ul > li.disabled {
-  opacity: 0.3;
+.replacement-ul--li {
+  transition: all 0.2s ease;
+  color: white;
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: black;
+  border-bottom: 1px solid #eeeeee;
 }
-.prettydropdown > ul > li.disabled {
-  cursor: not-allowed;
+.replacement-ul--li:last-child {
+  border-bottom: 0px;
 }
-.prettydropdown.multiple > ul > li.selected + li, .prettydropdown.multiple > ul.reverse > li.selected {
-  border-top-color: #dedede;
+.replacement-ul--li:hover {
+  background-color: #7420A3;
+  color: white;
 }
-.prettydropdown > ul > li.label {
-  border-top-color: #dedede;
+.replacement-ul--li.checked {
+  color: white;
+  background-color: #7420A3;
 }
-.prettydropdown > ul > li.label ~ li.selected {
-  border-top-color: #dedede;
+.replacement-ul--li.checked .checker {
+  border: 1px solid black;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
 }
-.prettydropdown * {
-  direction: rtl !important;
-  text-align: right;
+.replacement-ul--li.checked .checker.checked {
+  background-color: #ffd000;
+  color: black;
+}
+.replacement-ul--li .checker {
+  border: 1px solid black;
+  width: 10px;
+  height: 10px;
+  display: inline-block;
+}
+.replacement-ul--li .checker.checked {
+  background-color: #7420A3;
+  color: black;
 }
 
 /*# sourceMappingURL=selection.css.map */

@@ -6,8 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link rel="stylesheet" href="./css/app.css"/>
     <link rel="stylesheet" href="./css/selection.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Almarai:300,400,700,800&amp;display=swap&amp;subset=arabic" rel="stylesheet"/>
-    <script src="https://kit.fontawesome.com/7ccf14bcd9.js"></script>
     <title>عاملة كام | بيع</title>
   </head>
   <body>
@@ -30,114 +28,126 @@
             <h2 class="text-xl text-black font-semibold text-center my-4"> بكل سهولة هتقدر تعلن عن عربيتك ببلاش</h2>
       <p class="header">المعلومات الأساسية</p>
       <div class="flex flex-wrap px-2">
-        <form class="-mx-2 w-full" action="#" method="post">
+        <form class="w-full -mx-2" action="#" method="post">
           <div class="flex flex-wrap w-full px-2 inputs">
                 <div class="input px-2 my-2 w-full md:w-1/2 lg:w-1/3 ">
                   <p class="my-2 font-bold title m-2">عنوان الإعلان:</p>
                   <div class="x flex-grow">
                     <input type="text" placeholder="مثال: فيات 98 بحالة ممتازة"/>
-                    <p class="help-block help">هذا الحقل مطلوب.</p>
+                    <p class="help-block help"> </p>
                   </div>
                 </div>
-                <div class="w-full  md:w-1/2 lg:w-1/3  my-2 px-2">
+                <div class="w-full md:w-1/2 lg:w-1/3  my-2 px-2">
                   <label class="my-2 inline-block font-bold title pl-2" for="brand">الماركة:</label>
-                  <select class="w-full" data-placeholder="-- اختر -- " name="brand" id="brand">
-                    <option value="val">ماركة</option>
-                    <option value="val">ماركة</option>
-                    <option value="val">ماركة</option>
-                    <option value="val">ماركة</option>
-                    <option value="val">ماركة</option>
-                    <option value="val">ماركة</option>
-                  </select>
-                  <p class="help-block help"> هذا الحقل مطلوب.</p>
+                  <div data-wrapper="brand">
+                    <select class="w-full " name="brand" id="brand">
+                      <option>1سنة</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>سنة</option>
+                    </select>
+                  </div>
+                  <p class="help-block help"> </p>
                 </div>
-                <div class="w-full  md:w-1/2 lg:w-1/3  my-2 px-2">
+                <div class="w-full md:w-1/2 lg:w-1/3  my-2 px-2">
                   <label class="my-2 inline-block font-bold title pl-2" for="model">موديل:</label>
-                  <select class="w-full" data-placeholder="سنة" name="model" id="model">
-                    <option value="val">1سنة</option>
-                    <option value="val">2</option>
-                    <option value="val">3</option>
-                    <option value="val">4</option>
-                    <option value="val">سنة</option>
-                  </select>
-                  <p class="help-block help"> هذا الحقل مطلوب.</p>
+                  <div data-wrapper="model">
+                    <select class="w-full " name="model" id="model">
+                      <option>1سنة</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>سنة</option>
+                    </select>
+                  </div>
+                  <p class="help-block help"> </p>
                 </div>
                 <div class="input px-2 my-2 w-full md:w-1/2 lg:w-1/3 ">
                   <p class="my-2 font-bold title m-2">سعة المحرك:</p>
                   <div class="x flex-grow">
                     <input type="text" placeholder="مثال: 1400 "/>
-                    <p class="help-block help">هذا الحقل مطلوب.</p>
+                    <p class="help-block help"> </p>
                   </div>
                 </div>
-                <div class="w-full  md:w-1/2 lg:w-1/3  my-2 px-2">
+                <div class="w-full md:w-1/2 lg:w-1/3  my-2 px-2">
                   <label class="my-2 inline-block font-bold title pl-2" for="town">المدينة:</label>
-                  <select class="w-full" data-placeholder="اختار مدينتك" name="town" id="town">
-                    <option value="val">مدينة</option>
-                    <option value="val">مدينة</option>
-                    <option value="val">مدينة</option>
-                    <option value="val">مدينة</option>
-                    <option value="val">مدينة</option>
-                    <option value="val">مدينة]</option>
-                  </select>
-                  <p class="help-block help"> هذا الحقل مطلوب.</p>
+                  <div data-wrapper="town">
+                    <select class="w-full " name="town" id="town">
+                      <option>1سنة</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>سنة</option>
+                    </select>
+                  </div>
+                  <p class="help-block help"> </p>
                 </div>
                 <div class="input px-2 my-2 w-full md:w-1/2 lg:w-1/3 ">
                   <p class="my-2 font-bold title m-2">سعة المحرك:</p>
                   <div class="x flex-grow">
                     <input type="text" placeholder="مثال: 1400 "/>
-                    <p class="help-block help">هذا الحقل مطلوب.</p>
+                    <p class="help-block help"> </p>
                   </div>
                 </div>
                 <div class="input px-2 my-2 w-full md:w-1/2 lg:w-1/3 ">
                   <p class="my-2 font-bold title m-2">المسافة (كم):</p>
                   <div class="x flex-grow">
                     <input type="text" placeholder="مثال: 1400 "/>
-                    <p class="help-block help">هذا الحقل مطلوب.</p>
+                    <p class="help-block help"> </p>
                   </div>
                 </div>
-                <div class="w-full  md:w-1/2 lg:w-1/3  my-2 px-2">
+                <div class="w-full md:w-1/2 lg:w-1/3  my-2 px-2">
                   <label class="my-2 inline-block font-bold title pl-2" for="transmission">ناقل الحركة:</label>
-                  <select class="w-full" data-placeholder="اختار نوع الناقل" name="transmission" id="transmission">
-                    <option value="val">نوع</option>
-                    <option value="val">نوع</option>
-                    <option value="val">نوع</option>
-                    <option value="val">نوع</option>
-                  </select>
-                  <p class="help-block help"> هذا الحقل مطلوب.</p>
+                  <div data-wrapper="transmission">
+                    <select class="w-full " name="transmission" id="transmission">
+                      <option>1سنة</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>سنة</option>
+                    </select>
+                  </div>
+                  <p class="help-block help"> </p>
                 </div>
-                <div class="w-full  md:w-1/2 lg:w-1/3  my-2 px-2">
+                <div class="w-full md:w-1/2 lg:w-1/3  my-2 px-2">
                   <label class="my-2 inline-block font-bold title pl-2" for="fuel">الوقود:</label>
-                  <select class="w-full" data-placeholder="اختار نوع الوقود" name="fuel" id="fuel">
-                    <option value="val">وقود</option>
-                    <option value="val">وقود</option>
-                    <option value="val">وقود</option>
-                    <option value="val">وقود</option>
-                  </select>
-                  <p class="help-block help"> هذا الحقل مطلوب.</p>
+                  <div data-wrapper="fuel">
+                    <select class="w-full " name="fuel" id="fuel">
+                      <option>1سنة</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>سنة</option>
+                    </select>
+                  </div>
+                  <p class="help-block help"> </p>
                 </div>
-                <div class="w-full  md:w-1/2 lg:w-1/3  my-2 px-2">
+                <div class="w-full md:w-1/2 lg:w-1/3  my-2 px-2">
                   <label class="my-2 inline-block font-bold title pl-2" for="color">اللون:</label>
-                  <select class="w-full" data-placeholder="اختار لون العربية" name="color" id="color">
-                    <option value="val">لون</option>
-                    <option value="val">لون</option>
-                    <option value="val">لون</option>
-                    <option value="val">لون</option>
-                    <option value="val">لون</option>
-                  </select>
-                  <p class="help-block help"> هذا الحقل مطلوب.</p>
+                  <div data-wrapper="color">
+                    <select class="w-full " name="color" id="color">
+                      <option>1سنة</option>
+                      <option>2</option>
+                      <option>3</option>
+                      <option>4</option>
+                      <option>سنة</option>
+                    </select>
+                  </div>
+                  <p class="help-block help"> </p>
                 </div>
                 <div class="input px-2 my-2 w-full md:w-1/2 lg:w-1/3 ">
                   <p class="my-2 font-bold title m-2">السعر:</p>
                   <div class="x flex-grow">
                     <input type="text" placeholder="هتبيع بكام؟"/>
-                    <p class="help-block help">هذا الحقل مطلوب.</p>
+                    <p class="help-block help"> </p>
                   </div>
                 </div>
             <div class="input px-2 my-2 w-full md:w-1/2 lg:w-2/3">
               <p class="my-2 font-bold title">تفاصيل أكتر:</p>
               <textarea id="details" name="details" width="100%" cols="30" rows="3" placeholder="حاجات الزبون هيكون عايز يعرفها مثال: حالة الكوتشات, المساعدين, عاملة عمرة,الخ..."></textarea>
               <p class="help-block help">هذا الحقل مطلوب.                            </p>
-            </div><a class="btn mx-auto my-5 self-center" href="sell2.html">التالي</a>
+            </div><a class="btn mx-auto my-5 self-center indigo" href="sell2.html">التالي</a>
           </div>
         </form>
       </div>
@@ -196,17 +206,7 @@
       </div>
     </footer>
     <script src="./js/libs/jquery.slim.js"></script>
-    <script src="./js/libs/select/jquery.prettydropdowns.js"></script>
-    <script>
-      $(document).ready(function() {
-          // Initiate Pretty Dropdowns
-          $('.oneChoice').prettyDropdown({
-              width: "100%",
-      
-          });
-      });
-      
-    </script>
+    <script src="./js/modules/selectbox/single.js"></script>
     <script src="./js/main.js"></script>
   </body>
 </html>

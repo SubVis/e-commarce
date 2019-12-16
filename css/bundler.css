@@ -16,6 +16,10 @@
   margin: 10px 0;
 }
 
+.error {
+  border: 2px solid #e61e17;
+}
+
 button.indigo, a.btn.indigo {
   color: white;
   background-image: linear-gradient(to left, #7420a3, #7420a3, rgba(116, 32, 163, 0.75));
@@ -261,6 +265,10 @@ form.center {
   margin: 10px 0;
 }
 
+.error {
+  border: 2px solid #e61e17;
+}
+
 button.indigo, a.btn.indigo {
   color: white;
   background-image: linear-gradient(to left, #7420a3, #7420a3, rgba(116, 32, 163, 0.75));
@@ -302,6 +310,25 @@ button.yellow:hover, a.btn.yellow:hover {
   height: 100%;
   cursor: pointer;
 }
+.inputs .img .tools {
+  position: absolute;
+  z-index: 50;
+  bottom: 0;
+  background: #000;
+  width: 100%;
+  left: 0;
+  height: 50px;
+  padding: 5px;
+  transition: all 0.4s ease;
+  background: rgba(0, 0, 0, 0.7);
+}
+.inputs .img .tools button i {
+  color: white;
+}
+.inputs .img .tools button.delete {
+  background-color: #a70629;
+  border-radius: 5px;
+}
 .inputs input {
   z-index: 40;
   position: relative;
@@ -338,6 +365,10 @@ button.yellow:hover, a.btn.yellow:hover {
   font-weight: 400;
   font-size: 25px;
   margin: 10px 0;
+}
+
+.error {
+  border: 2px solid #e61e17;
 }
 
 button.indigo, a.btn.indigo {

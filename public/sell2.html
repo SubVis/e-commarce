@@ -6,8 +6,6 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
     <link rel="stylesheet" href="./css/app.css"/>
     <link rel="stylesheet" href="./css/selection.css"/>
-    <link href="https://fonts.googleapis.com/css?family=Almarai:300,400,700,800&amp;display=swap&amp;subset=arabic" rel="stylesheet"/>
-    <script src="https://kit.fontawesome.com/7ccf14bcd9.js"></script>
     <title>عاملة كام | بيع</title>
   </head>
   <body>
@@ -27,134 +25,166 @@
           </div>
         </nav>
     <div class="container mx-auto pb-32">
-      <div class="px-4">
-                <h2 class="text-xl text-black font-semibold text-center my-4"> بكل سهولة هتقدر تعلن عن عربيتك ببلاش</h2>
-        <p class="header">الصور</p>
-        <div class="-mx-2">
-          <div class="px-2">
-            <form class="flex flex-wrap text-center px-2" enctype="multipart/form-data" method="post" action="#">
-              <div class="inputs my-2 px-2 relative overflow-hidden h-64 w-full md:w-1/2 lg:w-1/3">
-                <input class="w-full h-full" data-get="0" type="file" name="1"/>
-                <div class="img relative w-full h-full"><img class="img" data-preview="0"/>
-                  <div class="tools">
-                    <button id="deletImage">x</button>
+      <form enctype="multipart/form-data" method="post" action="#">
+        <div class="px-4">
+                    <h2 class="text-xl text-black font-semibold text-center my-4"> بكل سهولة هتقدر تعلن عن عربيتك ببلاش</h2>
+          <p class="header">الصور</p>
+          <div class="-mx-2">
+            <div class="px-2">
+              <div class="flex flex-wrap text-center px-2">
+                <div class="inputs my-2 px-2 relative overflow-hidden h-64 w-full md:w-1/2 lg:w-1/3">
+                  <input class="w-full h-full" data-get="0" type="file" name="1"/>
+                  <div class="img relative w-full h-full"><img class="img" data-preview="0"/>
+                    <div class="tools">
+                      <button class="delBtn delete px-2 py-1" type="button" data-del="0"><i class="far fa-times-circle"></i></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="inputs my-2 px-2 relative overflow-hidden h-64 w-full md:w-1/2 lg:w-1/3">
+                  <input class="w-full h-full" data-get="1" type="file" name="1"/>
+                  <div class="img relative w-full h-full"><img class="img" data-preview="1"/>
+                    <div class="tools">
+                      <button class="delBtn delete px-2 py-1" type="button" data-del="1"><i class="far fa-times-circle"></i></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="inputs my-2 px-2 relative overflow-hidden h-64 w-full md:w-1/2 lg:w-1/3">
+                  <input class="w-full h-full" data-get="2" type="file" name="1"/>
+                  <div class="img relative w-full h-full"><img class="img" data-preview="2"/>
+                    <div class="tools">
+                      <button class="delBtn delete px-2 py-1" type="button" data-del="2"><i class="far fa-times-circle"></i></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="inputs my-2 px-2 relative overflow-hidden h-64 w-full md:w-1/2 lg:w-1/3">
+                  <input class="w-full h-full" data-get="3" type="file" name="1"/>
+                  <div class="img relative w-full h-full"><img class="img" data-preview="3"/>
+                    <div class="tools">
+                      <button class="delBtn delete px-2 py-1" type="button" data-del="3"><i class="far fa-times-circle"></i></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="inputs my-2 px-2 relative overflow-hidden h-64 w-full md:w-1/2 lg:w-1/3">
+                  <input class="w-full h-full" data-get="4" type="file" name="1"/>
+                  <div class="img relative w-full h-full"><img class="img" data-preview="4"/>
+                    <div class="tools">
+                      <button class="delBtn delete px-2 py-1" type="button" data-del="4"><i class="far fa-times-circle"></i></button>
+                    </div>
+                  </div>
+                </div>
+                <div class="inputs my-2 px-2 relative overflow-hidden h-64 w-full md:w-1/2 lg:w-1/3">
+                  <input class="w-full h-full" data-get="5" type="file" name="1"/>
+                  <div class="img relative w-full h-full"><img class="img" data-preview="5"/>
+                    <div class="tools">
+                      <button class="delBtn delete px-2 py-1" type="button" data-del="5"><i class="far fa-times-circle"></i></button>
+                    </div>
                   </div>
                 </div>
               </div>
-              <div class="inputs my-2 px-2 relative overflow-hidden h-64 w-full md:w-1/2 lg:w-1/3">
-                <input class="w-full h-full" data-get="1" type="file" name="1"/>
-                <div class="img relative w-full h-full"><img class="img" data-preview="1"/>
-                  <div class="tools">
-                    <button id="deletImage">x</button>
-                  </div>
-                </div>
+            </div>
+          </div>
+          <div class="mt-12">
+            <p class="header">التجهيزات</p>
+            <div class="flex flex-wrap">
+              <div class="one w-full my-2 px-2">
+                            <div class="w-full my-2 px-2">
+                              <label class="font-bold text-xl color inline-block mb-2" for="comfort">وسائل الراحة</label>
+                              <div data-wrapper="comfort">
+                                <select class="w-full " name="comfort" id="comfort" multiple="multiple">
+                                  <option>وسائل الراحة</option>
+                                  <option>المكيف</option>
+                                  <option> ريموت كنترول</option>
+                                  <option> فتحة سقف</option>
+                                  <option> مرايات كهرباء</option>
+                                  <option> مرايات ضم, غلق</option>
+                                  <option> فرش جلد</option>
+                                  <option>فرش قماش</option>
+                                  <option>باور</option>
+                                  <option> النظام الذكي لركن السيارات</option>
+                                </select>
+                              </div>
+                              <p class="help-block help"> </p>
+                            </div>
               </div>
-              <div class="inputs my-2 px-2 relative overflow-hidden h-64 w-full md:w-1/2 lg:w-1/3">
-                <input class="w-full h-full" data-get="2" type="file" name="1"/>
-                <div class="img relative w-full h-full"><img class="img" data-preview="2"/>
-                  <div class="tools">
-                    <button id="deletImage">x</button>
-                  </div>
-                </div>
+              <div class="two w-full my-2 px-2">
+                            <div class="w-full my-2 px-2">
+                              <label class="font-bold text-xl color inline-block mb-2" for="windows">نوافذ</label>
+                              <div data-wrapper="windows">
+                                <select class="w-full " name="windows" id="windows" multiple="multiple">
+                                  <option>نوافذ</option>
+                                  <option>نوافذ كهربائية أمامية</option>
+                                  <option>ريموت نوافذ كهربائية خلفية</option>
+                                  <option>زجاج فاميه</option>
+                                </select>
+                              </div>
+                              <p class="help-block help"> </p>
+                            </div>
               </div>
-              <div class="inputs my-2 px-2 relative overflow-hidden h-64 w-full md:w-1/2 lg:w-1/3">
-                <input class="w-full h-full" data-get="3" type="file" name="1"/>
-                <div class="img relative w-full h-full"><img class="img" data-preview="3"/>
-                  <div class="tools">
-                    <button id="deletImage">x</button>
-                  </div>
-                </div>
+              <div class="three w-full my-2 px-2">
+                            <div class="w-full my-2 px-2">
+                              <label class="font-bold text-xl color inline-block mb-2" for="soundSys">نظام الصوت</label>
+                              <div data-wrapper="soundSys">
+                                <select class="w-full " name="soundSys" id="soundSys" multiple="multiple">
+                                  <option>نظام الصوت</option>
+                                  <option>راديو كاسيت</option>
+                                  <option>مبدل أقراص</option>
+                                  <option>مشغل دي في دي</option>
+                                  <option>مشغل اسطوانات</option>
+                                  <option>مدخل AUX</option>
+                                  <option>مدخل USB</option>
+                                  <option>بلوتوث</option>
+                                  <option>نظام تحكم في الطارة</option>
+                                </select>
+                              </div>
+                              <p class="help-block help"> </p>
+                            </div>
               </div>
-              <div class="inputs my-2 px-2 relative overflow-hidden h-64 w-full md:w-1/2 lg:w-1/3">
-                <input class="w-full h-full" data-get="4" type="file" name="1"/>
-                <div class="img relative w-full h-full"><img class="img" data-preview="4"/>
-                  <div class="tools">
-                    <button id="deletImage">x</button>
-                  </div>
-                </div>
+              <div class="four w-full my-2 px-2">
+                            <div class="w-full my-2 px-2">
+                              <label class="font-bold text-xl color inline-block mb-2" for="security">وسائل الأمان</label>
+                              <div data-wrapper="security">
+                                <select class="w-full " name="security" id="security" multiple="multiple">
+                                  <option>وسائل الأمان</option>
+                                  <option>نظام الفرامل المانع للإنزلاق-ABS</option>
+                                  <option>وسادة هوائية للسائق</option>
+                                  <option>وسادة هوائية للركاب</option>
+                                  <option>وسادة هوائية جانبية</option>
+                                  <option>نظام توزيع قوى الفرامل EBD</option>
+                                  <option>حساسات</option>
+                                  <option>ESP</option>
+                                  <option>حساسات أمامية</option>
+                                  <option>حساسات خلفية</option>
+                                  <option>نظام ايموبليزر ضد السرقة</option>
+                                </select>
+                              </div>
+                              <p class="help-block help"> </p>
+                            </div>
               </div>
-              <div class="inputs my-2 px-2 relative overflow-hidden h-64 w-full md:w-1/2 lg:w-1/3">
-                <input class="w-full h-full" data-get="5" type="file" name="1"/>
-                <div class="img relative w-full h-full"><img class="img" data-preview="5"/>
-                  <div class="tools">
-                    <button id="deletImage">x</button>
-                  </div>
-                </div>
+              <div class="five w-full my-2 px-2">
+                            <div class="w-full my-2 px-2">
+                              <label class="font-bold text-xl color inline-block mb-2" for="others">مميزات أخرى</label>
+                              <div data-wrapper="others">
+                                <select class="w-full " name="others" id="others" multiple="multiple">
+                                  <option>مميزات أخرى</option>
+                                  <option>جنوط</option>
+                                  <option>مقاعد كهربائية</option>
+                                  <option>إنذار</option>
+                                  <option>كشافات ضباب</option>
+                                  <option>كاميرا خلفية</option>
+                                  <option>GPS</option>
+                                  <option>مثبت السرعة</option>
+                                  <option>قفل مركزي للابواب</option>
+                                  <option> سبويلر خلفي</option>
+                                </select>
+                              </div>
+                              <p class="help-block help"> </p>
+                            </div>
               </div>
-            </form>
+              <button class="indigo mx-auto my-8 px-16 mx-auto" type="button" id="dsa">خلاص</button>
+            </div>
           </div>
         </div>
-      </div>
-      <div class="px-4 mt-12">
-        <p class="header">التجهيزات</p>
-        <form class="flex flex-wrap" action="#" method="method">
-          <div class="one w-full my-2 px-2">
-            <label class="font-bold text-xl color inline-block mb-2">وسائل الراحة</label>
-            <select class="multiple" data-placeholder="اختر وسائل الراحة المتاحة في سيارتك" multiple="multiple">
-              <option value="airconetion">المكيف</option>
-              <option value="remoteControl">ريموت كنترول</option>
-              <option value="openRoof">فتحة سقف</option>
-              <option value="electricMirrors">مرايات كهرباء</option>
-              <option value="closeMirors">مرايات ضم, غلق</option>
-              <option value="leather">فرش جلد</option>
-              <option value="normal">فرش قماش</option>
-              <option value="power">باور</option>
-              <option value="AiParking">النظام الذكي لركن السيارات</option>
-            </select>
-          </div>
-          <div class="two w-full my-2 px-2">
-            <label class="font-bold text-xl color inline-block mb-2" for="choices-multiple-default ">نوافذ</label>
-            <select class="multiple" data-placeholder="اختر الميزات الموجودة في نوافذ السيارة" multiple="multiple">
-              <option value="airconetion">نوافذ كهربائية أمامية</option>
-              <option value="remoteControl">ريموت نوافذ كهربائية خلفية</option>
-              <option value="openRoof">زجاج فاميه</option>
-            </select>
-          </div>
-          <div class="three w-full my-2 px-2">
-            <label class="font-bold text-xl color inline-block mb-2">نظام الصوت</label>
-            <select class="multiple" data-placeholder="اختر نظام الصوت المتاحة في سيارتك" multiple="multiple">
-              <option value="radio">راديو كاسيت</option>
-              <option value="cd">مبدل أقراص</option>
-              <option value="dvd">مشغل دي في دي</option>
-              <option value="cdPlayer">مشغل اسطوانات</option>
-              <option value="aux">مدخل AUX</option>
-              <option value="usb">مدخل USB</option>
-              <option value="blue">بلوتوث</option>
-              <option value="aIcontrol">نظام تحكم في الطارة</option>
-            </select>
-          </div>
-          <div class="four w-full my-2 px-2">
-            <label class="font-bold text-xl color inline-block mb-2">وسائل الأمان</label>
-            <select class="multiple" data-placeholder="اختر وسائل الأمان المتاحة في سيارتك" multiple="multiple">
-              <option value="ABS">نظام الفرامل المانع للإنزلاق-ABS</option>
-              <option value="driverAirBag">وسادة هوائية للسائق</option>
-              <option value="passAirBag">وسادة هوائية للركاب</option>
-              <option value="sideAirbag">وسادة هوائية جانبية</option>
-              <option value="ebd">نظام توزيع قوى الفرامل EBD</option>
-              <option value="sensors">حساسات</option>
-              <option value="esp">ESP</option>
-              <option value="frontSensors">حساسات أمامية</option>
-              <option value="backSensors">حساسات خلفية</option>
-              <option value="embloys">نظام ايموبليزر ضد السرقة</option>
-            </select>
-          </div>
-          <div class="five w-full my-2 px-2">
-            <label class="font-bold text-xl color inline-block mb-2">مميزات أخرى</label>
-            <select class="w-full multiple" data-placeholder="اخترالمميزات أخرى المتاحة في سيارتك" multiple="multiple">
-              <option value="jnot">جنوط</option>
-              <option value="elecChairs">مقاعد كهربائية</option>
-              <option value="alert">إنذار</option>
-              <option value="lights">كشافات ضباب</option>
-              <option value="backCamera">كاميرا خلفية</option>
-              <option value="GPS">GPS</option>
-              <option value="speenConsest">مثبت السرعة</option>
-              <option value="lock">قفل مركزي للابواب</option>
-              <option value="spoiler">سبويلر خلفي</option>
-            </select>
-          </div>
-          <button class="indigo mx-auto my-8 px-16 mx-auto" type="submit">خلاص</button>
-        </form>
-      </div>
+      </form>
     </div>
     <footer class="main_bg py-8 overflow-x-hidden">
       <div class="container mx-auto">
@@ -210,8 +240,7 @@
       </div>
     </footer>
     <script src="./js/libs/jquery.slim.js"></script>
-    <script src="./js/libs/select/jquery.prettydropdowns.js"></script>
-    <script src="./js/modules/chooseModule.js"></script>
+    <script src="./js/modules/selectbox/multi.js"></script>
     <script src="./js/modules/ImagePreview.js"></script>
     <script src="./js/main.js"></script>
   </body>
