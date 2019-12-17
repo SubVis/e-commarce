@@ -1,13 +1,15 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-  <head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-    <link rel="stylesheet" href="./css/app.css"/>
-    <link rel="stylesheet" href="./css/selection.css"/>
-    <title>عاملة كام | اشتري</title>
-  </head>
+    <head>
+      <meta charset="UTF-8"/>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+      <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+      <link rel="stylesheet" href="./css/app.css"/>
+      <link rel="stylesheet" href="./css/selection.css"/>
+      <link href="https://fonts.googleapis.com/css?family=Almarai:300,400,700,800&amp;display=swap&amp;subset=arabic" rel="stylesheet"/>
+      <script src="https://kit.fontawesome.com/7ccf14bcd9.js"> </script>
+      <title>عاملة كام | اشتري</title>
+    </head>
   <body class="overflow-x-hidden">
         <nav class="flex items-center justify-between flex-wrap p-6 indigo">
           <div class="flex items-center flex-no-shrink flex-grow text-white mr-6"><a class="font-semibold text-xl tracking-tight" href="index.html">عاملة كام؟</a></div>
@@ -211,76 +213,100 @@
       <p class="header">أحدث الإعلانات</p>
       <form class="flex flex-wrap px-2" action="#" method="post">
         <div class="px-2 my-2 flex-grow">
-          <select class="js-choice" id="slim-select" dir="rtl" name="salaryTo">
-            <optgroup>
-              <option value="1">السعر</option>
-              <option value="2">شيء</option>
-              <option value="3">شيء</option>
-            </optgroup>
-          </select>
+                      <div>
+                        <div data-wrapper="price">
+                          <select class="w-full " name="price" id="price">
+                            <option>السعر</option>
+                            <option>السعر</option>
+                            <option>السعر</option>
+                          </select>
+                        </div>
+                        <p class="help-block help"> </p>
+                      </div>
         </div>
         <div class="px-2 my-2 flex-grow">
-          <select class="js-choice" id="slim-select" dir="rtl" name="salaryTo">
-            <optgroup>
-              <option value="1">المدينة</option>
-              <option value="2">شيء</option>
-              <option value="3">شيء</option>
-            </optgroup>
-          </select>
+                      <div>
+                        <div data-wrapper="town">
+                          <select class="w-full " name="town" id="town">
+                            <option>المدينة</option>
+                            <option>المدينة</option>
+                            <option>المدينة</option>
+                          </select>
+                        </div>
+                        <p class="help-block help"> </p>
+                      </div>
         </div>
         <div class="px-2 my-2 flex-grow">
-          <select class="js-choice" id="slim-select" dir="rtl" name="salaryTo">
-            <optgroup>
-              <option value="1">الماركة</option>
-              <option value="2">شيء</option>
-              <option value="3">شيء</option>
-            </optgroup>
-          </select>
+                      <div>
+                        <div data-wrapper="brand">
+                          <select class="w-full " name="brand" id="brand">
+                            <option>الماركة</option>
+                            <option>الماركة</option>
+                            <option>الماركة</option>
+                          </select>
+                        </div>
+                        <p class="help-block help"> </p>
+                      </div>
         </div>
         <div class="px-2 my-2 flex-grow">
-          <select class="js-choice" id="slim-select" dir="rtl" name="salaryTo">
-            <optgroup>
-              <option value="1">الموديل</option>
-              <option value="2">شيء</option>
-              <option value="3">شيء</option>
-            </optgroup>
-          </select>
+                      <div>
+                        <div data-wrapper="model">
+                          <select class="w-full " name="model" id="model">
+                            <option>الموديل</option>
+                            <option>الموديل</option>
+                            <option>الموديل</option>
+                          </select>
+                        </div>
+                        <p class="help-block help"> </p>
+                      </div>
         </div>
         <div class="px-2 my-2 flex-grow">
-          <select class="js-choice" id="slim-select" dir="rtl" name="salaryTo">
-            <optgroup>
-              <option value="1">المسافة</option>
-              <option value="2">شيء</option>
-              <option value="3">شيء</option>
-            </optgroup>
-          </select>
+                      <div>
+                        <div data-wrapper="destence">
+                          <select class="w-full " name="destence" id="destence">
+                            <option>المسافة</option>
+                            <option>المسافة</option>
+                            <option>المسافة</option>
+                          </select>
+                        </div>
+                        <p class="help-block help"> </p>
+                      </div>
         </div>
         <div class="px-2 my-2 flex-grow">
-          <select class="js-choice" id="slim-select" dir="rtl" name="salaryTo">
-            <optgroup>
-              <option value="1">المحرك</option>
-              <option value="2">شيء</option>
-              <option value="3">شيء</option>
-            </optgroup>
-          </select>
+                      <div>
+                        <div data-wrapper="engine">
+                          <select class="w-full " name="engine" id="engine">
+                            <option>المحرك</option>
+                            <option>المحرك</option>
+                            <option>المحرك</option>
+                          </select>
+                        </div>
+                        <p class="help-block help"> </p>
+                      </div>
         </div>
         <div class="px-2 my-2 flex-grow">
-          <select class="js-choice" id="slim-select" dir="rtl" name="salaryTo">
-            <optgroup>
-              <option value="1">الناقل</option>
-              <option value="2">شيء</option>
-              <option value="3">شيء</option>
-            </optgroup>
-          </select>
+                      <div>
+                        <div data-wrapper="transmetion">
+                          <select class="w-full " name="transmetion" id="transmetion">
+                            <option>الناقل</option>
+                            <option>الناقل</option>
+                            <option>الناقل</option>
+                          </select>
+                        </div>
+                        <p class="help-block help"> </p>
+                      </div>
         </div>
         <div class="px-2 my-2 flex-grow">
-          <select class="js-choice" id="slim-select" dir="rtl" name="salaryTo">
-            <optgroup>
-              <option value="1">اللون</option>
-              <option value="2">شيء</option>
-              <option value="3">شيء</option>
-            </optgroup>
-          </select>
+                      <div>
+                        <div data-wrapper="color">
+                          <select class="w-full " name="color" id="color">
+                            <option>اللون</option>
+                            <option>اللون</option>
+                            <option>اللون</option>
+                          </select>
+                        </div>
+                        <p class="help-block help"> </p>
+                      </div>
         </div>
         <div class="px-2 my-2">
           <button class="indigo flex-grow" type="submit">بحث</button>

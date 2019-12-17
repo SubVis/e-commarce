@@ -15,6 +15,15 @@ mixin select(label,selectName, options)
                 -   }
         p.help-block.help  
 
+mixin selectNoLabel(selectName)
+    div
+        div(data-wrapper=selectName[0])
+            select(name=selectName[0], id=selectName[0], class="w-full ")&attributes(attributes)
+                option=selectName[1]
+                option=selectName[1]
+                option=selectName[1]
+        p.help-block.help  
+
 mixin multiSelect(label,selectName, options)
     div(class="w-full my-2 px-2")
         label(for=selectName class="font-bold text-xl color inline-block mb-2")=label

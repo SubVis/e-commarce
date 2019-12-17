@@ -133,5 +133,4 @@ window.onclick = function (e) {
             s.classList.remove("replacement-opened")
         });
     }
-        
- }
+};

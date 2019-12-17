@@ -1,16 +1,7 @@
 <!DOCTYPE html>
 html(lang="ar", dir="rtl")
-    head
-        meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
-        meta(http-equiv="X-UA-Compatible", content="ie=edge")
-        link(rel="stylesheet", href="./css/app.css")
-        link(rel="stylesheet", href="./css/selection.css")
-        
-        //- link(href="https://fonts.googleapis.com/css?family=Almarai:300,400,700,800&display=swap&subset=arabic", rel="stylesheet")
-        //- script(src="https://kit.fontawesome.com/7ccf14bcd9.js")
-
-        title عاملة كام | اشتري
+    include ../utils/head
+    +selHead("عاملة كام | اشتري")
     body.overflow-x-hidden
         include ../components/navbar
         +nav(['','active','','',''])
@@ -56,13 +47,9 @@ html(lang="ar", dir="rtl")
         .container.mx-auto.px-2.mt-8
             p.header أحدث الإعلانات
             form(action="#", method="post").flex.flex-wrap.px-2
-                each val in ['السعر', 'المدينة' , 'الماركة' ,'الموديل' , 'المسافة' , 'المحرك' , 'الناقل', 'اللون']
+                each val in [ ["price", 'السعر'], ["town",'المدينة'] , ["brand",'الماركة'] ,["model",'الموديل'] , ["destence",'المسافة'] , ["engine",'المحرك'] , ["transmetion",'الناقل'], ["color",'اللون']]
                     .px-2.my-2.flex-grow
-                        select#slim-select.js-choice(dir="rtl" name='salaryTo')
-                            optgroup
-                                option(value=1)=val
-                                option(value=2) شيء
-                                option(value=3) شيء
+                        +selectNoLabel(val)
                 .px-2.my-2
                     button(type="submit").indigo.flex-grow بحث
 
