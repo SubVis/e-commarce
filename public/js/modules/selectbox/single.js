@@ -98,20 +98,23 @@ function allOne(selecty, holder) {
                     value = val;
                     value = val;
                     optText = text;
-
+                    
                     // Set the placeholder
                     input.setAttribute("placeholder", text)
+                    parent.querySelector('div.replacement').classList.remove("replacement-opened");
                 }
 
             }
         });
+
+        
     }); // End of the function
 };
 
 /* ========================= code ========================= */
 let select = [...document.querySelectorAll('select')]; // All select tags in the dom
 
-allOne(select, "ابو حميد");
+allOne(select);
 
 let togglers = document.querySelectorAll('.replacement-input');
 togglers.forEach(function (div) {
@@ -123,3 +126,12 @@ togglers.forEach(function (div) {
     }
 });
 
+window.onclick = function (e) {
+    let m = e.target.classList.contains("replacement-input") || e.target.classList.contains("replacement-ul") || e.target.classList.contains("replacement-ul--li");
+    if(!m){
+        [...document.querySelectorAll('.replacement')].forEach( function (s) {
+            s.classList.remove("replacement-opened")
+        });
+    }
+        
+ }

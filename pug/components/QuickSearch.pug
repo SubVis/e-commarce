@@ -3,17 +3,17 @@
     .-mx-2
         form(action="#", method="post").inputs.flex.px-2.flex-wrap
             include ../utils/Selcetion
-            +select('الماركة:', 'brand','--اختر--' ,[['val', 'لون'],['val', 'لون'],['val', 'لون'],['val', 'لون'],['val', 'لون']] )        
-            +select('الموديل:', 'model','--اختر--' ,[['val', 'لون'],['val', 'لون'],['val', 'لون'],['val', 'لون'],['val', 'لون']] )        
-            +select('المحافظة:', 'governorate','--اختر--' ,[['val', 'لون'],['val', 'لون'],['val', 'لون'],['val', 'لون'],['val', 'لون']] )        
-            +select('نوع الهيكل:', 'outfitType','--اختر--' ,[['val', 'لون'],['val', 'لون'],['val', 'لون'],['val', 'لون'],['val', 'لون']] )        
-            +select('نوع الناقل:', 'transmissionType','--اختر--' ,[['val', 'لون'],['val', 'لون'],['val', 'لون'],['val', 'لون'],['val', 'لون']] )        
+            +select('الماركة:', 'brand' , [ '--اختر--', 'لون', 'لون', 'لون', 'لون', 'لون' ] )        
+            +select('الموديل:', 'model' , [ '--اختر--', 'لون', 'لون', 'لون', 'لون', 'لون' ] )        
+            +select('المحافظة:', 'governorate' , [ '--اختر--', 'لون', 'لون', 'لون', 'لون', 'لون' ] )        
+            +select('نوع الهيكل:', 'outfitType' , [ '--اختر--', 'لون', 'لون', 'لون', 'لون', 'لون' ] )        
+            +select('نوع الناقل:', 'transmissionType' , [ '--اختر--', 'لون', 'لون', 'لون', 'لون', 'لون' ] )        
             
             .px-2.flex.justify-between(class="w-full mt-2 md:w-1/2 lg:w-2/5")
                 .px-2(class="w-full")
                     label.my-2.font-bold.title السعر:
                     .flex
-                        select.w-full(data-placeholder="من" , name="salaryFrom", id="salaryFrom")
+                        select.w-full.mx-2(data-placeholder="من" , name="salaryFrom", id="salaryFrom")
                             option شيء2
                             option شيء 1
                         select.w-full(data-placeholder="إلى" , name="salaryTo", id="salaryTo")

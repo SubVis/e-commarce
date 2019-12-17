@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="ar" dir="rtl">
-    <head>
-      <meta charset="UTF-8"/>
-      <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-      <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
-      <link rel="stylesheet" href="./css/app.css"/><link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery.sumoselect/3.0.2/sumoselect.min.css">
-      <link href="https://fonts.googleapis.com/css?family=Almarai:300,400,700,800&amp;display=swap&amp;subset=arabic" rel="stylesheet"/>
-      <script src="https://kit.fontawesome.com/7ccf14bcd9.js"></script>
-      <title>عاملة كام | الرئيسية</title>
-    </head>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge"/>
+    <link rel="stylesheet" href="./css/app.css"/>
+    <link rel="stylesheet" href="./css/selection.css"/>
+    <title>عاملة كام | اشتري</title>
+  </head>
   <body class="overflow-x-hidden">
         <nav class="flex items-center justify-between flex-wrap p-6 indigo">
           <div class="flex items-center flex-no-shrink flex-grow text-white mr-6"><a class="font-semibold text-xl tracking-tight" href="index.html">عاملة كام؟</a></div>
@@ -34,11 +33,12 @@
                           <label class="my-2 inline-block font-bold title pl-2" for="brand">الماركة:</label>
                           <div data-wrapper="brand">
                             <select class="w-full " name="brand" id="brand">
-                              <option>val,لون</option>
-                              <option>val,لون</option>
-                              <option>val,لون</option>
-                              <option>val,لون</option>
-                              <option>val,لون</option>
+                              <option>--اختر--</option>
+                              <option>لون</option>
+                              <option>لون</option>
+                              <option>لون</option>
+                              <option>لون</option>
+                              <option>لون</option>
                             </select>
                           </div>
                           <p class="help-block help"> </p>
@@ -47,11 +47,12 @@
                           <label class="my-2 inline-block font-bold title pl-2" for="model">الموديل:</label>
                           <div data-wrapper="model">
                             <select class="w-full " name="model" id="model">
-                              <option>val,لون</option>
-                              <option>val,لون</option>
-                              <option>val,لون</option>
-                              <option>val,لون</option>
-                              <option>val,لون</option>
+                              <option>--اختر--</option>
+                              <option>لون</option>
+                              <option>لون</option>
+                              <option>لون</option>
+                              <option>لون</option>
+                              <option>لون</option>
                             </select>
                           </div>
                           <p class="help-block help"> </p>
@@ -60,11 +61,12 @@
                           <label class="my-2 inline-block font-bold title pl-2" for="governorate">المحافظة:</label>
                           <div data-wrapper="governorate">
                             <select class="w-full " name="governorate" id="governorate">
-                              <option>val,لون</option>
-                              <option>val,لون</option>
-                              <option>val,لون</option>
-                              <option>val,لون</option>
-                              <option>val,لون</option>
+                              <option>--اختر--</option>
+                              <option>لون</option>
+                              <option>لون</option>
+                              <option>لون</option>
+                              <option>لون</option>
+                              <option>لون</option>
                             </select>
                           </div>
                           <p class="help-block help"> </p>
@@ -73,11 +75,12 @@
                           <label class="my-2 inline-block font-bold title pl-2" for="outfitType">نوع الهيكل:</label>
                           <div data-wrapper="outfitType">
                             <select class="w-full " name="outfitType" id="outfitType">
-                              <option>val,لون</option>
-                              <option>val,لون</option>
-                              <option>val,لون</option>
-                              <option>val,لون</option>
-                              <option>val,لون</option>
+                              <option>--اختر--</option>
+                              <option>لون</option>
+                              <option>لون</option>
+                              <option>لون</option>
+                              <option>لون</option>
+                              <option>لون</option>
                             </select>
                           </div>
                           <p class="help-block help"> </p>
@@ -86,11 +89,12 @@
                           <label class="my-2 inline-block font-bold title pl-2" for="transmissionType">نوع الناقل:</label>
                           <div data-wrapper="transmissionType">
                             <select class="w-full " name="transmissionType" id="transmissionType">
-                              <option>val,لون</option>
-                              <option>val,لون</option>
-                              <option>val,لون</option>
-                              <option>val,لون</option>
-                              <option>val,لون</option>
+                              <option>--اختر--</option>
+                              <option>لون</option>
+                              <option>لون</option>
+                              <option>لون</option>
+                              <option>لون</option>
+                              <option>لون</option>
                             </select>
                           </div>
                           <p class="help-block help"> </p>
@@ -99,7 +103,7 @@
               <div class="px-2 w-full">
                 <label class="my-2 font-bold title">السعر:</label>
                 <div class="flex">
-                  <select class="w-full" data-placeholder="من" name="salaryFrom" id="salaryFrom">
+                  <select class="w-full mx-2" data-placeholder="من" name="salaryFrom" id="salaryFrom">
                     <option>شيء2</option>
                     <option>شيء 1</option>
                   </select>
@@ -553,8 +557,7 @@
     </div>
   </footer>
   <script src="./js/libs/siema.min.js"></script>
-  <script src="./js/lib/Choices.js"></script>
-  <script src="./js/modules/choicesConfig.js"></script>
+  <script src="./js/modules/selectbox/single.js"></script>
   <script>
     const mySiema = new Siema({
         selector: '.siema',
